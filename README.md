@@ -266,7 +266,7 @@ InteleView-AI/
 ## 🚀 Installation & Setup
 
 ```bash
-git clone https://github.com/your-username/InteleView-AI.git
+git clone https://github.com/firose-git/InteleView-AI-Mock-Test.git
 cd InteleView-AI
 python -m venv venv
 source venv/bin/activate
