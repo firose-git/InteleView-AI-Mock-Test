@@ -1,0 +1,12 @@
+{% extends 'dashboard/base_dashboard.html' %}
+
+{% load static %}
+{% block title %}Group Discussion | InteleView AI{% endblock %}
+
+{% block page_content %}
+<div class="gd-landing-container">
+    <h2>🗣️ AI-Powered Group Discussion</h2>
+    <p>Prepare to participate in a 3-topic round (3 minutes each). Your voice will be transcribed and analyzed by AI to give instant feedback.</p>
+    <a href="{% url 'GD:gd_instructions' %}" class="btn btn-primary mt-4">🚀 Start GD Round</a>
+</div>
+{% endblock %}

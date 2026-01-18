@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us | InteleView AI</title>
+    <link href="{% static 'landing/css/contact.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="contact-container">
+        <div class="contact-box glass">
+            <div class="left">
+                <h2>Let's Talk</h2>
+                <p>Have questions, feedback, or ideas? We'd love to hear from you. Fill out the form and we’ll be in
+                    touch soon.</p>
+                <ul class="contact-info">
+                    <li><i class="fas fa-envelope"></i> support@inteleview.ai</li>
+                    <li><i class="fas fa-phone"></i> +91 XXXXXXXXXXX</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Bangalore , Karnataka</li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="right">
+                <h2>Contact Form</h2>
+                <form method="POST" novalidate>
+                    {% csrf_token %}
+                    {{ form.non_field_errors }}
+                    <div class="input-group">
+                        {{ form.name }}
+                        <label>Name</label>
+                    </div>
+                    <div class="input-group">
+                        {{ form.email }}
+                        <label>Email</label>
+                    </div>
+                    <div class="input-group">
+                        {{ form.subject }}
+                        <label>Subject</label>
+                    </div>
+                    <div class="input-group">
+                        {{ form.message }}
+                        <label>Message</label>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

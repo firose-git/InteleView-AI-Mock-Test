@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>{% block title %}InteleView AI{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'chatbot/chatbot.css' %}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    {% block content %}{% endblock %}
+    {% block scripts %}{% endblock %}
+
+    {% include 'chatbot/chatbot_widget.html' %}
+    <script src="{% static 'chatbot/chatbot.js' %}"></script>
+</body>
+</html>

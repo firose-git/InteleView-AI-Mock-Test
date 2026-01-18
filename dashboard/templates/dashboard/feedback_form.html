@@ -1,0 +1,12 @@
+{% extends 'dashboard/base_dashboard.html' %}
+{% block title %}Feedback | InteleView AI{% endblock %}
+
+{% block content %}
+<h3>📝 Feedback Form</h3>
+<form method="post">
+  {% csrf_token %}
+  <label>How was your experience?</label><br>
+  <textarea name="feedback" rows="4" cols="50" required></textarea><br><br>
+  <button type="submit" class="btn btn-secondary">Submit</button>
+</form>
+{% endblock %}

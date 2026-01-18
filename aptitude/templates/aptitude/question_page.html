@@ -1,0 +1,124 @@
+{% extends 'aptitude/base_aptitude.html' %}
+{% block title %}Aptitude Test - Q{{ index }}{% endblock %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'aptitude/aptitude.css' %}">
+
+<!-- 🔢 Floating On-screen Calculator -->
+<div id="calculator" class="position-fixed top-50 end-0 translate-middle-y me-3 bg-light border rounded shadow p-3" style="z-index: 999; width: 220px;">
+  <h6 class="text-center">🧮 Calc</h6>
+  <input type="text" id="calc-display" class="form-control mb-2 text-end" disabled>
+  <div class="d-grid gap-1">
+    <div class="d-flex">
+      <button class="btn btn-sm btn-outline-dark w-100" onclick="calcInput('7')">7</button>
+      <button class="btn btn-sm btn-outline-dark w-100" onclick="calcInput('8')">8</button>
+      <button class="btn btn-sm btn-outline-dark w-100" onclick="calcInput('9')">9</button>
+      <button class="btn btn-sm btn-outline-danger w-100" onclick="calcInput('/')">/</button>
+    </div>
+    <div class="d-flex">
+      <button class="btn btn-sm btn-outline-dark w-100" onclick="calcInput('4')">4</button>
+      <button class="btn btn-sm btn-outline-dark w-100" onclick="calcInput('5')">5</button>
+      <button class="btn btn-sm btn-outline-dark w-100" onclick="calcInput('6')">6</button>
+      <button class="btn btn-sm btn-outline-danger w-100" onclick="calcInput('*')">*</button>
+    </div>
+    <div class="d-flex">
+      <button class="btn btn-sm btn-outline-dark w-100" onclick="calcInput('1')">1</button>
+      <button class="btn btn-sm btn-outline-dark w-100" onclick="calcInput('2')">2</button>
+      <button class="btn btn-sm btn-outline-dark w-100" onclick="calcInput('3')">3</button>
+      <button class="btn btn-sm btn-outline-danger w-100" onclick="calcInput('-')">-</button>
+    </div>
+    <div class="d-flex">
+      <button class="btn btn-sm btn-outline-dark w-100" onclick="calcInput('0')">0</button>
+      <button class="btn btn-sm btn-outline-dark w-100" onclick="calcInput('.')">.</button>
+      <button class="btn btn-sm btn-outline-success w-100" onclick="calcEval()">=</button>
+      <button class="btn btn-sm btn-outline-danger w-100" onclick="calcInput('+')">+</button>
+    </div>
+    <div class="d-grid">
+      <button class="btn btn-sm btn-outline-secondary mt-1" onclick="calcClear()">Clear</button>
+    </div>
+  </div>
+</div>
+
+<!-- 📄 Aptitude Question Form -->
+<div class="container mt-5">
+  <div class="card shadow-sm p-4">
+    <h4 class="mb-3">🧠 Aptitude Test – Question {{ index }} of {{ total }}</h4>
+
+    <form method="post">
+      {% csrf_token %}
+      <p class="fw-bold">{{ question.question_text }}</p>
+      <div class="list-group">
+        {% for option in options %}
+        <label class="list-group-item">
+          <input class="form-check-input me-1" type="radio" name="option" value="{{ option }}" required>
+          {{ option }}
+        </label>
+        {% endfor %}
+      </div>
+
+      <div class="mt-4 d-flex justify-content-between">
+        <span class="text-muted">Domain: {{ question.domain }} | Section: {{ question.section }}</span>
+        <button type="submit" class="btn btn-success">Next Question →</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+{% endblock %}
+<!-- 🧠 JS Section: Calculator & Tab Monitoring -->
+<script>
+  // On-screen Calculator Functions
+  const calcDisplay = document.getElementById('calc-display');
+  function calcInput(val) {
+    calcDisplay.value += val;
+  }
+  function calcEval() {
+    try {
+      calcDisplay.value = eval(calcDisplay.value);
+    } catch {
+      calcDisplay.value = 'Error';
+    }
+  }
+  function calcClear() {
+    calcDisplay.value = '';
+  }
+
+  // 🛑 Tab / Shortcut Cheating Detection
+  let hasCheated = false;
+
+  window.addEventListener('blur', () => {
+    if (!hasCheated) {
+      hasCheated = true;
+      showWarning("⚠️ Tab switching detected! This is not allowed.");
+      reportCheating();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.altKey || e.ctrlKey || e.key === 'F5') {
+      showWarning("⚠️ Key shortcut used! This is recorded.");
+      reportCheating();
+    }
+  });
+
+  function showWarning(message) {
+    let alertBox = document.getElementById("warning-box");
+    if (!alertBox) {
+      alertBox = document.createElement("div");
+      alertBox.id = "warning-box";
+      alertBox.className = "alert alert-danger text-center fw-bold position-fixed top-0 w-100 z-3";
+      alertBox.style.zIndex = "9999";
+      document.body.prepend(alertBox);
+    }
+    alertBox.textContent = message;
+  }
+
+  function reportCheating() {
+    fetch('/aptitude/log-cheating/', {
+      method: 'POST',
+      headers: { 'X-CSRFToken': '{{ csrf_token }}' }
+    });
+  }
+</script>

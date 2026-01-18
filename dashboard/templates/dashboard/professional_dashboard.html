@@ -1,0 +1,1685 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Dashboard - InteleView AI</title>
+
+    <!-- External Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="{% static 'images/inteleview.png' %}">
+
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --warning-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            --danger-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            --info-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --dark-gradient: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            --card-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            --hover-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+            --border-radius: 20px;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(120, 219, 255, 0.3) 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 1rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .navbar-nav .nav-link {
+            color: #333 !important;
+            font-weight: 500;
+            transition: var(--transition);
+            border-radius: 10px;
+            margin: 0 5px;
+            padding: 8px 16px !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background: rgba(102, 126, 234, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .dashboard-container {
+            padding: 140px 0 60px;
+            min-height: 100vh;
+        }
+
+        .dashboard-header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: var(--card-shadow);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .dashboard-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent 0deg, rgba(102, 126, 234, 0.1) 60deg, transparent 120deg);
+            animation: rotate 10s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .welcome-section {
+            position: relative;
+            z-index: 2;
+        }
+
+        .welcome-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .welcome-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .time-date-section {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .time-date-item {
+            background: rgba(102, 126, 234, 0.1);
+            padding: 1rem 1.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            min-width: 150px;
+            text-align: center;
+        }
+
+        .time-date-item i {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .time-display {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .date-display {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .label-text {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.2rem;
+        }
+
+        .user-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: var(--transition);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--primary-gradient);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: var(--hover-shadow);
+        }
+
+        .card-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: white;
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-icon::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            filter: brightness(1.2);
+            transform: scale(0);
+            border-radius: inherit;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover .card-icon::before {
+            transform: scale(1);
+        }
+
+        .resume-card .card-icon {
+            background: var(--success-gradient);
+        }
+
+        .hr-card .card-icon {
+            background: var(--warning-gradient);
+        }
+
+        .gd-card .card-icon {
+            background: var(--secondary-gradient);
+        }
+
+        .performance-card .card-icon {
+            background: var(--info-gradient);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            color: #2c3e50;
+        }
+
+        .card-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .card-features {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .card-features li {
+            padding: 0.5rem 0;
+            color: #555;
+            display: flex;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .card-features li:hover {
+            color: #667eea;
+            transform: translateX(5px);
+        }
+
+        .card-features li i {
+            color: #28a745;
+            margin-right: 0.8rem;
+            width: 20px;
+            font-size: 0.9rem;
+        }
+
+        .action-btn {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 0.5rem;
+        }
+
+        .action-btn::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%);
+            transform: translateX(-100%);
+            transition: var(--transition);
+        }
+
+        .action-btn:hover::before {
+            transform: translateX(0);
+        }
+
+        .btn-primary {
+            background: var(--primary-gradient);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: var(--secondary-gradient);
+            color: white;
+        }
+
+        .btn-success {
+            background: var(--success-gradient);
+            color: white;
+        }
+
+        .btn-warning {
+            background: var(--warning-gradient);
+            color: white;
+        }
+
+        .action-btn:hover {
+            transform: translateY(-3px);
+            color: white;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .status-badge {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+        }
+
+        .badge-available {
+            background: rgba(40, 167, 69, 0.9);
+            color: white;
+        }
+
+        .badge-premium {
+            background: rgba(255, 193, 7, 0.9);
+            color: #333;
+        }
+
+        .badge-new {
+            background: rgba(220, 53, 69, 0.9);
+            color: white;
+        }
+
+        .quick-actions {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title i {
+            margin-right: 0.5rem;
+            color: #667eea;
+        }
+
+        .quick-action-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .quick-action-item {
+            background: rgba(102, 126, 234, 0.05);
+            border: 2px solid rgba(102, 126, 234, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quick-action-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+            transition: var(--transition);
+        }
+
+        .quick-action-item:hover::before {
+            left: 100%;
+        }
+
+        .quick-action-item:hover {
+            background: rgba(102, 126, 234, 0.1);
+            border-color: #667eea;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
+        }
+
+        .quick-action-item i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+            transition: var(--transition);
+        }
+
+        .quick-action-item:hover i {
+            transform: scale(1.2);
+        }
+
+        .quick-action-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .quick-action-desc {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .upcoming-sessions {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            box-shadow: var(--card-shadow);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            margin-bottom: 3rem;
+        }
+
+        .session-item {
+            display: flex;
+            align-items: center;
+            padding: 1.5rem;
+            border-radius: 15px;
+            background: rgba(102, 126, 234, 0.05);
+            margin-bottom: 1rem;
+            transition: var(--transition);
+            border: 1px solid rgba(102, 126, 234, 0.1);
+        }
+
+        .session-item:hover {
+            background: rgba(102, 126, 234, 0.1);
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+
+        .session-time {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            margin-right: 1.5rem;
+            min-width: 130px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .session-details h6 {
+            margin-bottom: 0.3rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .session-details small {
+            color: #666;
+        }
+
+        .feature-highlight {
+            background: var(--primary-gradient);
+            color: white;
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+        }
+
+        .feature-highlight::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent 0deg, rgba(255, 255, 255, 0.1) 60deg, transparent 120deg);
+            animation: rotate 15s linear infinite;
+        }
+
+        .highlight-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .notification-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #dc3545;
+            color: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
+        }
+
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .floating-element {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            top: 60%;
+            right: 10%;
+            animation-delay: -2s;
+        }
+
+        .floating-element:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: -4s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .user-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .quick-action-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .time-date-section {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .welcome-title {
+                font-size: 2rem;
+            }
+
+            .dashboard-header,
+            .feature-card,
+            .quick-actions,
+            .upcoming-sessions {
+                padding: 1.5rem;
+            }
+
+            .session-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .session-time {
+                margin-right: 0;
+                min-width: auto;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .dashboard-container {
+                padding: 120px 15px 40px;
+            }
+
+            .user-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-action-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Loading Animation */
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-gradient);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary-gradient);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Floating Background Elements -->
+    <div class="floating-elements">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-brain me-2"></i>
+                InteleView AI
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-nav ms-auto d-flex flex-row align-items-center">
+      <div class="nav-item dropdown me-3">
+        <a class="nav-link dropdown-toggle user-dropdown" href="#" role="button" data-bs-toggle="dropdown">
+          <i class="fas fa-user-circle me-2"></i>
+          <span class="user-name">{{ request.user.first_name|default:"User" }}</span>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="{% url 'users:profile' %}"><i class="fas fa-user me-2"></i>Profile</a></li>
+          <li><a class="dropdown-item" href="{% url 'users:settings' %}"><i class="fas fa-cog me-2"></i>Settings</a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item" href="{% url 'users:user_logout' %}"><i
+                class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+        </ul>
+      </div>
+    </div>
+        </div>
+    </nav>
+
+    <!-- Main Dashboard Container -->
+    <div class="dashboard-container">
+        <div class="container-fluid">
+
+            <!-- Dashboard Header -->
+            <div class="dashboard-header" data-aos="fade-up">
+                <div class="welcome-section">
+                    <h1 class="welcome-title">
+                        <i class="fas fa-briefcase me-3"></i>
+                        Welcome back, Professional!
+                    </h1>
+                    <p class="welcome-subtitle">
+                        Ready to ace your next interview? Let's elevate your career to new heights with AI-powered mock
+                        interviews.
+                    </p>
+
+                    <!-- Real-time Date and Time Section -->
+                    <div class="time-date-section">
+                        <div class="time-date-item">
+                            <div><i class="fas fa-clock"></i></div>
+                            <div class="time-display" id="currentTime">--:--:--</div>
+                            <div class="label-text">Current Time</div>
+                        </div>
+                        <div class="time-date-item">
+                            <div><i class="fas fa-calendar-alt"></i></div>
+                            <div class="date-display" id="currentDate">--/--/----</div>
+                            <div class="label-text">Today's Date</div>
+                        </div>
+                        <div class="time-date-item">
+                            <div><i class="fas fa-globe"></i></div>
+                            <div class="date-display" id="timezone">UTC</div>
+                            <div class="label-text">Timezone</div>
+                        </div>
+                    </div>
+
+                    <!-- User Statistics -->
+                    <div class="user-stats" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-item">
+                            <span class="stat-number">24</span>
+                            <span class="stat-label">Interviews Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">87%</span>
+                            <span class="stat-label">Average Score</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Resume Uploads</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">GD Sessions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Features Grid -->
+            <div class="dashboard-grid">
+
+                <!-- Resume Analysis Card -->
+                <div class="feature-card resume-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="status-badge badge-available">Available</div>
+                    <div class="card-icon">
+                        <i class="fas fa-file-upload"></i>
+                    </div>
+                    <h3 class="card-title">AI Resume Analysis</h3>
+                    <p class="card-description">
+                        Upload your resume for comprehensive AI-powered analysis and get personalized interview
+                        questions tailored to your professional profile.
+                    </p>
+                    <ul class="card-features">
+                        <li><i class="fas fa-check"></i> ATS Compatibility Score</li>
+                        <li><i class="fas fa-check"></i> Keyword Optimization</li>
+                        <li><i class="fas fa-check"></i> Tailored Interview Questions</li>
+                        <li><i class="fas fa-check"></i> Skill Gap Analysis</li>
+                        <li><i class="fas fa-check"></i> Industry-specific Insights</li>
+                    </ul>
+                    <a href="#" class="action-btn btn-success" onclick="uploadResume()">
+                        <i class="fas fa-upload me-2"></i>
+                        Upload & Analyze Resume
+                    </a>
+                </div>
+
+                <!-- HR Interview Card -->
+                <div class="feature-card hr-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="status-badge badge-available">AI Powered</div>
+                    <div class="card-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="card-title">AI HR Interview</h3>
+                    <p class="card-description">
+                        Experience realistic HR interviews with our advanced AI interviewer. Practice behavioral
+                        questions and professional scenarios.
+                    </p>
+                    <ul class="card-features">
+                        <li><i class="fas fa-check"></i> Real-time Voice Recognition</li>
+                        <li><i class="fas fa-check"></i> Behavioral & Situational Questions</li>
+                        <li><i class="fas fa-check"></i> Instant Performance Feedback</li>
+                        <li><i class="fas fa-check"></i> Video Analysis & Body Language</li>
+                        <li><i class="fas fa-check"></i> Professional Communication Tips</li>
+                    </ul>
+                    <div class="d-grid gap-2">
+                        <a href="#" class="action-btn btn-warning" onclick="startHRInterview()">
+                            <i class="fas fa-microphone me-2"></i>
+                            Start HR Interview
+                        </a>
+                        <button class="btn btn-outline-secondary btn-sm" onclick="scheduleHR()">
+                            <i class="fas fa-calendar me-1"></i> Schedule for Later
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Group Discussion Card -->
+                <div class="feature-card gd-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="status-badge badge-premium">Premium</div>
+                    <div class="position-relative">
+                        <div class="card-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="notification-badge">5</div>
+                    </div>
+                    <h3 class="card-title">Group Discussion Arena</h3>
+                    <p class="card-description">
+                        Join live group discussions with AI moderator and professionals. Practice leadership,
+                        communication, and critical thinking skills.
+                    </p>
+                    <ul class="card-features">
+                        <li><i class="fas fa-check"></i> Live AI Moderation</li>
+                        <li><i class="fas fa-check"></i> Multi-participant Rooms</li>
+                        <li><i class="fas fa-check"></i> Dynamic Topic Generation</li>
+                        <li><i class="fas fa-check"></i> Communication Scoring</li>
+                        <li><i class="fas fa-check"></i> Leadership Assessment</li>
+                    </ul>
+                    <div class="d-grid gap-2">
+                        <a href="#" class="action-btn btn-secondary" onclick="joinGD()">
+                            <i class="fas fa-comments me-2"></i>
+                            Join GD Session
+                        </a>
+                        <button class="btn btn-outline-primary btn-sm" onclick="createGDRoom()">
+                            <i class="fas fa-plus me-1"></i> Create Private Room
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Performance Analytics Card -->
+                <div class="feature-card performance-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="status-badge badge-new">Recently Updated</div>
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="card-title">Performance Analytics</h3>
+                    <p class="card-description">
+                        Track your interview performance with detailed analytics, identify improvement areas, and
+                        monitor your professional growth.
+                    </p>
+                    <ul class="card-features">
+                        <li><i class="fas fa-check"></i> Detailed Performance Reports</li>
+                        <li><i class="fas fa-check"></i> Progress Tracking Over Time</li>
+                        <li><i class="fas fa-check"></i> Personalized Recommendations</li>
+                        <li><i class="fas fa-check"></i> Industry Benchmarking</li>
+                        <li><i class="fas fa-check"></i> Skill Development Roadmap</li>
+                    </ul>
+                    <a href="#" class="action-btn btn-primary" onclick="viewAnalytics()">
+                        <i class="fas fa-analytics me-2"></i>
+                        View Performance Dashboard
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Quick Actions Section -->
+            <div class="quick-actions" data-aos="fade-up" data-aos-delay="600">
+                <h4 class="section-title">
+                    <i class="fas fa-bolt"></i>
+                    Quick Actions
+                </h4>
+                <div class="quick-action-grid">
+                    <div class="quick-action-item" onclick="quickStart('technical')">
+                        <i class="fas fa-code"></i>
+                        <div class="quick-action-title">Technical Round</div>
+                        <div class="quick-action-desc">Coding & Technical Skills</div>
+                    </div>
+                    <div class="quick-action-item" onclick="practiceMode()">
+                        <i class="fas fa-dumbbell"></i>
+                        <div class="quick-action-title">Practice Mode</div>
+                        <div class="quick-action-desc">Free Practice Session</div>
+                    </div>
+                    <div class="quick-action-item" onclick="mockTest()">
+                        <i class="fas fa-clipboard-list"></i>
+                        <div class="quick-action-title">Mock Assessment</div>
+                        <div class="quick-action-desc">Complete Evaluation</div>
+                    </div>
+                    <div class="quick-action-item" onclick="viewTips()">
+                        <i class="fas fa-lightbulb"></i>
+                        <div class="quick-action-title">Expert Tips</div>
+                        <div class="quick-action-desc">Professional Guidance</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Sessions -->
+            <div class="upcoming-sessions" data-aos="fade-up" data-aos-delay="700">
+                <h4 class="section-title">
+                    <i class="fas fa-calendar-alt"></i>
+                    Upcoming Sessions
+                </h4>
+                <div id="upcoming-sessions-list">
+                    <div class="session-item">
+                        <div class="session-time">Today<br>3:30 PM</div>
+                        <div class="session-details flex-grow-1">
+                            <h6>HR Practice Session</h6>
+                            <small class="text-muted">Behavioral Questions & Leadership Skills</small>
+                        </div>
+                        <button class="btn btn-primary" onclick="joinSession('hr-today')">
+                            <i class="fas fa-video me-1"></i> Join Now
+                        </button>
+                    </div>
+                    <div class="session-item">
+                        <div class="session-time">Tomorrow<br>10:00 AM</div>
+                        <div class="session-details flex-grow-1">
+                            <h6>Group Discussion Arena</h6>
+                            <small class="text-muted">Topic: "Future of Work & Technology"</small>
+                        </div>
+                        <button class="btn btn-outline-primary" onclick="setReminder('gd-tomorrow')">
+                            <i class="fas fa-bell me-1"></i> Set Reminder
+                        </button>
+                    </div>
+                    <div class="session-item">
+                        <div class="session-time">Friday<br>2:00 PM</div>
+                        <div class="session-details flex-grow-1">
+                            <h6>Technical Interview Prep</h6>
+                            <small class="text-muted">System Design & Problem Solving</small>
+                        </div>
+                        <button class="btn btn-outline-secondary" onclick="viewDetails('tech-friday')">
+                            <i class="fas fa-info-circle me-1"></i> Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature Highlight -->
+            <div class="feature-highlight" data-aos="fade-up" data-aos-delay="800">
+                <div class="highlight-content">
+                    <h3><i class="fas fa-rocket me-3"></i>New AI Feature Launch!</h3>
+                    <p class="mb-4 fs-5">Experience our revolutionary AI-powered video interview analysis with real-time
+                        facial expression recognition, speech pattern evaluation, and professional presence scoring!</p>
+                    <div class="d-flex gap-3 justify-content-center flex-wrap">
+                        <button class="btn btn-light btn-lg" onclick="showFeatureDemo()">
+                            <i class="fas fa-play me-2"></i>Watch Demo
+                        </button>
+                        <button class="btn btn-outline-light btn-lg" onclick="tryNewFeature()">
+                            <i class="fas fa-star me-2"></i>Try Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Schedule HR Modal -->
+    <div class="modal fade" id="scheduleHRModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 20px; border: none;">
+                <div class="modal-header"
+                    style="background: var(--primary-gradient); color: white; border-radius: 20px 20px 0 0;">
+                    <h5 class="modal-title"><i class="fas fa-calendar me-2"></i>Schedule HR Interview</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" style="padding: 2rem;">
+                    <form id="scheduleForm">
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Preferred Date</label>
+                            <input type="date" class="form-control" id="scheduleDate" required
+                                style="border-radius: 10px; padding: 0.75rem;">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Preferred Time</label>
+                            <select class="form-select" id="scheduleTime" required
+                                style="border-radius: 10px; padding: 0.75rem;">
+                                <option value="">Select time...</option>
+                                <option value="09:00">9:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="16:00">4:00 PM</option>
+                                <option value="18:00">6:00 PM</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Interview Focus</label>
+                            <select class="form-select" id="interviewFocus"
+                                style="border-radius: 10px; padding: 0.75rem;">
+                                <option value="general">General HR Questions</option>
+                                <option value="behavioral">Behavioral Interview</option>
+                                <option value="situational">Situational Questions</option>
+                                <option value="leadership">Leadership Assessment</option>
+                                <option value="company-specific">Company-specific Prep</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer" style="padding: 1.5rem 2rem;">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        style="border-radius: 10px;">Cancel</button>
+                    <button type="button" class="btn btn-primary" onclick="confirmSchedule()"
+                        style="border-radius: 10px; background: var(--primary-gradient); border: none;">
+                        <i class="fas fa-check me-1"></i>Schedule Session
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Create GD Room Modal -->
+    <div class="modal fade" id="createGDModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content" style="border-radius: 20px; border: none;">
+                <div class="modal-header"
+                    style="background: var(--secondary-gradient); color: white; border-radius: 20px 20px 0 0;">
+                    <h5 class="modal-title"><i class="fas fa-users me-2"></i>Create GD Room</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" style="padding: 2rem;">
+                    <form id="gdForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-bold">Room Name</label>
+                                <input type="text" class="form-control" id="roomName"
+                                    placeholder="e.g., Tech Industry Discussion" required
+                                    style="border-radius: 10px; padding: 0.75rem;">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-bold">Maximum Participants</label>
+                                <select class="form-select" id="maxParticipants"
+                                    style="border-radius: 10px; padding: 0.75rem;">
+                                    <option value="4">4 participants</option>
+                                    <option value="6">6 participants</option>
+                                    <option value="8">8 participants</option>
+                                    <option value="10">10 participants</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Discussion Topic</label>
+                            <select class="form-select" id="gdTopic" style="border-radius: 10px; padding: 0.75rem;">
+                                <option value="auto">Auto-generate topic</option>
+                                <option value="technology">Technology & Innovation</option>
+                                <option value="business">Business & Economy</option>
+                                <option value="social">Social Issues & Ethics</option>
+                                <option value="environment">Environment & Climate</option>
+                                <option value="leadership">Leadership & Management</option>
+                                <option value="custom">Custom Topic</option>
+                            </select>
+                        </div>
+                        <div class="mb-3" id="customTopicDiv" style="display: none;">
+                            <label class="form-label fw-bold">Custom Topic</label>
+                            <input type="text" class="form-control" id="customTopic"
+                                placeholder="Enter your discussion topic"
+                                style="border-radius: 10px; padding: 0.75rem;">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-check mb-3">
+                                    <input type="checkbox" class="form-check-input" id="privateRoom">
+                                    <label class="form-check-label fw-bold">Make room private (invite only)</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-check mb-3">
+                                    <input type="checkbox" class="form-check-input" id="recordSession">
+                                    <label class="form-check-label fw-bold">Record session for analysis</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer" style="padding: 1.5rem 2rem;">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        style="border-radius: 10px;">Cancel</button>
+                    <button type="button" class="btn btn-success" onclick="createRoom()"
+                        style="border-radius: 10px; background: var(--success-gradient); border: none;">
+                        <i class="fas fa-plus me-1"></i>Create Room
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="successToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i class="fas fa-check-circle text-success me-2"></i>
+                <strong class="me-auto">Success</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+            </div>
+            <div class="toast-body">
+                Action completed successfully!
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out-cubic',
+            once: true,
+            offset: 100
+        });
+
+        // Real-time Clock and Date Update
+        function updateDateTime() {
+            const now = new Date();
+
+            // Format time
+            const timeOptions = {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+            };
+            const currentTime = now.toLocaleTimeString('en-US', timeOptions);
+
+            // Format date
+            const dateOptions = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            };
+            const currentDate = now.toLocaleDateString('en-US', dateOptions);
+
+            // Get timezone
+            const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+            // Update DOM elements
+            document.getElementById('currentTime').textContent = currentTime;
+            document.getElementById('currentDate').textContent = currentDate;
+            document.getElementById('timezone').textContent = timezone.replace('_', ' ');
+        }
+
+        // Update time every second
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+
+        // Dashboard functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            initializeDashboard();
+            loadUserData();
+            setupEventListeners();
+        });
+
+        function initializeDashboard() {
+            // Add loading effects
+            const cards = document.querySelectorAll('.feature-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        }
+
+        function loadUserData() {
+            // Simulate loading user statistics
+            animateCounters();
+            loadNotifications();
+        }
+
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.textContent);
+                const increment = target / 50;
+                let current = 0;
+
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = target + (counter.textContent.includes('%') ? '%' : '');
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.floor(current) + (counter.textContent.includes('%') ? '%' : '');
+                    }
+                }, 30);
+            });
+        }
+
+        function loadNotifications() {
+            // Simulate notification updates
+            const badges = document.querySelectorAll('.notification-badge');
+            badges.forEach(badge => {
+                badge.style.animation = 'pulse 2s infinite';
+            });
+        }
+
+        function setupEventListeners() {
+            // Handle GD topic change
+            const gdTopicSelect = document.getElementById('gdTopic');
+            if (gdTopicSelect) {
+                gdTopicSelect.addEventListener('change', function () {
+                    const customDiv = document.getElementById('customTopicDiv');
+                    customDiv.style.display = this.value === 'custom' ? 'block' : 'none';
+                });
+            }
+
+            // Set minimum date for scheduling
+            const today = new Date().toISOString().split('T')[0];
+            const scheduleDateInput = document.getElementById('scheduleDate');
+            if (scheduleDateInput) {
+                scheduleDateInput.min = today;
+            }
+        }
+
+        // Resume Upload Function
+        function uploadResume() {
+            showLoadingToast('Preparing resume upload...');
+            setTimeout(() => {
+                showSuccessToast('Resume upload feature ready! Click to upload your resume.');
+                // Here you would redirect to resume upload page
+                // window.location.href = '/dashboard/upload-resume/';
+            }, 1500);
+        }
+
+        // HR Interview Functions
+        function startHRInterview() {
+            if (confirm('🎯 Ready to start your HR interview session? This will be a comprehensive evaluation of your professional skills and behavior.')) {
+                showLoadingToast('Setting up AI interviewer...');
+                setTimeout(() => {
+                    showSuccessToast('AI HR Interview starting now! Good luck! 🚀');
+                    // window.location.href = '/dashboard/hr-interview/';
+                }, 2000);
+            }
+        }
+
+        function scheduleHR() {
+            const modal = new bootstrap.Modal(document.getElementById('scheduleHRModal'));
+            modal.show();
+        }
+
+        function confirmSchedule() {
+            const form = document.getElementById('scheduleForm');
+            if (form.checkValidity()) {
+                const scheduleData = {
+                    date: document.getElementById('scheduleDate').value,
+                    time: document.getElementById('scheduleTime').value,
+                    focus: document.getElementById('interviewFocus').value
+                };
+
+                const btn = event.target;
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<span class="loading-spinner"></span> Scheduling...';
+                btn.disabled = true;
+
+                setTimeout(() => {
+                    showSuccessToast(`HR Interview scheduled for ${scheduleData.date} at ${scheduleData.time}! 📅`);
+                    bootstrap.Modal.getInstance(document.getElementById('scheduleHRModal')).hide();
+
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+
+                    addToUpcomingSessions(scheduleData);
+                }, 2000);
+            } else {
+                form.reportValidity();
+            }
+        }
+
+        // Group Discussion Functions
+        function joinGD() {
+            showLoadingToast('Finding available GD sessions...');
+            setTimeout(() => {
+                if (Math.random() > 0.3) {
+                    showSuccessToast('Found an active session! Joining Group Discussion... 💬');
+                    // window.location.href = '/dashboard/group-discussion/';
+                } else {
+                    if (confirm('No active sessions found. Would you like to create a new room?')) {
+                        createGDRoom();
+                    }
+                }
+            }, 1500);
+        }
+
+        function createGDRoom() {
+            const modal = new bootstrap.Modal(document.getElementById('createGDModal'));
+            modal.show();
+        }
+
+        function createRoom() {
+            const form = document.getElementById('gdForm');
+            if (form.checkValidity()) {
+                const roomData = {
+                    name: document.getElementById('roomName').value,
+                    maxParticipants: document.getElementById('maxParticipants').value,
+                    topic: document.getElementById('gdTopic').value,
+                    customTopic: document.getElementById('customTopic').value,
+                    private: document.getElementById('privateRoom').checked,
+                    record: document.getElementById('recordSession').checked
+                };
+
+                const btn = event.target;
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<span class="loading-spinner"></span> Creating...';
+                btn.disabled = true;
+
+                setTimeout(() => {
+                    const roomId = 'GD' + Math.random().toString(36).substr(2, 9).toUpperCase();
+                    const roomLink = window.location.origin + '/gd/room/' + roomId;
+
+                    showSuccessToast(`Room "${roomData.name}" created successfully! 🎉<br>Room ID: ${roomId}`);
+
+                    bootstrap.Modal.getInstance(document.getElementById('createGDModal')).hide();
+
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+
+                    // Copy room link to clipboard
+                    navigator.clipboard.writeText(roomLink).then(() => {
+                        console.log('Room link copied to clipboard');
+                    });
+
+                }, 2000);
+            } else {
+                form.reportValidity();
+            }
+        }
+
+        // Performance Analytics
+        function viewAnalytics() {
+            showLoadingToast('Loading your performance analytics...');
+            setTimeout(() => {
+                showSuccessToast('Performance dashboard loaded! View your detailed analytics. 📊');
+                // window.location.href = '/dashboard/analytics/';
+            }, 1500);
+        }
+
+        // Quick Actions
+        function quickStart(type) {
+            switch (type) {
+                case 'technical':
+                    showInfoToast('🚀 Technical interviews coming soon! Advanced coding challenges and system design questions.');
+                    break;
+                default:
+                    console.log('Quick start:', type);
+            }
+        }
+
+        function practiceMode() {
+            if (confirm('🏃‍♂️ Start a quick 15-minute practice session? This will be an informal interview to warm up your skills.')) {
+                showLoadingToast('Setting up practice environment...');
+                setTimeout(() => {
+                    showSuccessToast('Practice mode activated! Relaxed interview session starting... ✨');
+                }, 1500);
+            }
+        }
+
+        function mockTest() {
+            if (confirm('🎯 Ready for a comprehensive 45-minute mock interview? This will include detailed evaluation and feedback.')) {
+                showLoadingToast('Preparing comprehensive mock interview...');
+                setTimeout(() => {
+                    showSuccessToast('Full mock interview session starting! Show your best! 💪');
+                }, 2000);
+            }
+        }
+
+        function viewTips() {
+            showInfoToast('💡 Opening professional interview tips and expert guidance...');
+            setTimeout(() => {
+                window.open('/interview-tips/', '_blank');
+            }, 1000);
+        }
+
+        // Session Management
+        function joinSession(sessionId) {
+            showLoadingToast('Joining session...');
+            setTimeout(() => {
+                showSuccessToast('Joining your scheduled session! Get ready! 🎬');
+                // Handle session join logic
+            }, 1500);
+        }
+
+        function setReminder(sessionId) {
+            showSuccessToast('⏰ Reminder set! You\'ll be notified 15 minutes before the session.');
+
+            // Simulate setting browser notification
+            if ('Notification' in window) {
+                if (Notification.permission === 'granted') {
+                    // Notification is already granted
+                } else if (Notification.permission !== 'denied') {
+                    Notification.requestPermission().then(permission => {
+                        if (permission === 'granted') {
+                            showSuccessToast('✅ Browser notifications enabled for reminders!');
+                        }
+                    });
+                }
+            }
+        }
+
+        function viewDetails(sessionId) {
+            showInfoToast('📋 Loading session details and preparation materials...');
+            setTimeout(() => {
+                alert('Session Details:\n\n📅 Date: Friday, 2:00 PM\n🎯 Focus: Technical Interview Prep\n📚 Topics: System Design, Problem Solving\n⏱️ Duration: 60 minutes\n👨‍💻 Interviewer: AI Technical Expert\n\n💡 Preparation Tips:\n- Review system design fundamentals\n- Practice coding problems\n- Prepare questions about the role');
+            }, 1000);
+        }
+
+        // Feature Demo
+        function showFeatureDemo() {
+            showLoadingToast('Loading AI feature demonstration...');
+            setTimeout(() => {
+                showSuccessToast('🎥 Demo video ready! Experience the future of AI interviews.');
+                // You could embed a video modal or redirect
+                // window.open('/feature-demo/', '_blank');
+            }, 2000);
+        }
+
+        function tryNewFeature() {
+            showLoadingToast('Activating new AI features...');
+            setTimeout(() => {
+                showSuccessToast('🌟 New AI features activated! Enhanced video analysis now available.');
+                // Redirect to new feature
+                // window.location.href = '/dashboard/ai-video-interview/';
+            }, 2500);
+        }
+
+        // Utility Functions
+        function addToUpcomingSessions(scheduleData) {
+            const sessionsList = document.getElementById('upcoming-sessions-list');
+            const newSession = document.createElement('div');
+            newSession.className = 'session-item';
+            newSession.innerHTML = `
+                <div class="session-time">${formatDate(scheduleData.date)}<br>${formatTime(scheduleData.time)}</div>
+                <div class="session-details flex-grow-1">
+                    <h6>Scheduled HR Interview</h6>
+                    <small class="text-muted">Focus: ${scheduleData.focus.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}</small>
+                </div>
+                <button class="btn btn-outline-warning" onclick="rescheduleSession(this)">
+                    <i class="fas fa-clock me-1"></i> Reschedule
+                </button>
+            `;
+            sessionsList.insertBefore(newSession, sessionsList.firstChild);
+
+            // Animate new session
+            newSession.style.opacity = '0';
+            newSession.style.transform = 'translateX(-20px)';
+            setTimeout(() => {
+                newSession.style.transition = 'all 0.5s ease';
+                newSession.style.opacity = '1';
+                newSession.style.transform = 'translateX(0)';
+            }, 100);
+        }
+
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const today = new Date();
+            const tomorrow = new Date(today);
+            tomorrow.setDate(tomorrow.getDate() + 1);
+
+            if (date.toDateString() === today.toDateString()) {
+                return 'Today';
+            } else if (date.toDateString() === tomorrow.toDateString()) {
+                return 'Tomorrow';
+            } else {
+                return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+            }
+        }
+
+        function formatTime(timeString) {
+            const [hours, minutes] = timeString.split(':');
+            const time = new Date();
+            time.setHours(parseInt(hours), parseInt(minutes));
+            return time.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+        }
+
+        // Toast Notification Functions
+        function showSuccessToast(message) {
+            showToast(message, 'success', 'fas fa-check-circle');
+        }
+
+        function showInfoToast(message) {
+            showToast(message, 'info', 'fas fa-info-circle');
+        }
+
+        function showLoadingToast(message) {
+            showToast(message, 'primary', 'fas fa-spinner fa-spin');
+        }
+
+        function showToast(message, type, icon) {
+            const toastContainer = document.querySelector('.toast-container');
+            const toastId = 'toast-' + Date.now();
+
+            const toastHTML = `
+                <div id="${toastId}" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true" data-bs-delay="4000">
+                    <div class="toast-header bg-${type} text-white">
+                        <i class="${icon} me-2"></i>
+                        <strong class="me-auto">InteleView AI</strong>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
+                    </div>
+                    <div class="toast-body">
+                        ${message}
+                    </div>
+                </div>
+            `;
+
+            toastContainer.insertAdjacentHTML('beforeend', toastHTML);
+            const toastElement = document.getElementById(toastId);
+            const toast = new bootstrap.Toast(toastElement);
+            toast.show();
+
+            // Remove toast element after it's hidden
+            toastElement.addEventListener('hidden.bs.toast', () => {
+                toastElement.remove();
+            });
+        }
+
+        // Keyboard Shortcuts
+        document.addEventListener('keydown', function (e) {
+            if (e.altKey) {
+                switch (e.key) {
+                    case 'r':
+                        e.preventDefault();
+                        uploadResume();
+                        break;
+                    case 'h':
+                        e.preventDefault();
+                        startHRInterview();
+                        break;
+                    case 'g':
+                        e.preventDefault();
+                        joinGD();
+                        break;
+                    case 'a':
+                        e.preventDefault();
+                        viewAnalytics();
+                        break;
+                }
+            }
+        });
+
+        // Page Visibility API
+        document.addEventListener('visibilitychange', function () {
+            if (!document.hidden) {
+                // Refresh data when user returns
+                updateDateTime();
+                loadNotifications();
+            }
+        });
+
+        // Add CSS animation for pulse effect
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.1); }
+                100% { transform: scale(1); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Initialize tooltips if needed
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+
+        // Welcome animation
+        setTimeout(() => {
+            showSuccessToast('🎉 Welcome to your Professional Dashboard! Everything is ready for your next interview success.');
+        }, 1000);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'chatbot/chatbot.css' %}">
+<script src="{% static 'chatbot/chatbot.js' %}"></script>
+
+<div id="chatbot-icon" onclick="toggleChatbot()">🤖</div>
+
+<div id="chatbot-box" style="display: none;">
+    <div id="chatbot-header">InteleView AI Bot</div>
+    <div id="chatbot-messages"></div>
+    <div id="typing-indicator" style="display: none; padding: 10px; color: gray;">Bot is typing...</div>
+    <input id="chatbot-input" type="text" placeholder="Type your message..." onkeypress="handleKey(event)">
+</div>

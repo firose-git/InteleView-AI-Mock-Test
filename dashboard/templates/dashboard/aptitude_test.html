@@ -1,0 +1,10 @@
+{% extends 'dashboard/base_dashboard.html' %}
+{% block title %}Aptitude Test | InteleView AI{% endblock %}
+
+{% block page_content %}
+<div class="test-card" style="padding: 30px; background: #f0faff; border-radius: 15px; box-shadow: 0 0 12px rgba(0, 198, 255, 0.3);">
+  <h3 style="color: #003c78;">📝 Start Aptitude Test</h3>
+  <p>This test includes <strong>40 MCQs</strong> covering <em>Verbal, Reasoning, and Numerical Ability</em>.</p>
+  <a href="{% url 'aptitude:start_test' %}" class="btn btn-success mt-3">Begin Test</a>
+</div>
+{% endblock %}

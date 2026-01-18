@@ -1,0 +1,22 @@
+/* static/users/css/otp.css */
+.otp-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .resend-btn {
+    background-color: transparent;
+    color: #007bff;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .resend-btn:hover {
+    color: #0056b3;
+  }
+  
+  

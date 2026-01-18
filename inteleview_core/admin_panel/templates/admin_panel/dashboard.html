@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+<link rel="icon" type="image/png" href="{% static 'images/inteleview.png' %}">
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">📊 Admin Dashboard</h2>
+    <div class="row text-center">
+        <div class="col-md-3">
+            <div class="card bg-light shadow rounded p-3">
+                <h5>Total Users</h5>
+                <h3>{{ total_users }}</h3>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-light shadow rounded p-3">
+                <h5>Test Sessions</h5>
+                <h3>{{ total_sessions }}</h3>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-light shadow rounded p-3">
+                <h5>Feedbacks</h5>
+                <h3>{{ total_feedbacks }}</h3>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-light shadow rounded p-3">
+                <h5>Tab Switch Logs</h5>
+                <h3>{{ tab_logs }}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

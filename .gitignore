@@ -1,0 +1,97 @@
+# ==============================
+# Python
+# ==============================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+
+# ==============================
+# Django
+# ==============================
+*.log
+db.sqlite3
+db.sqlite3-journal
+
+# Uploaded files (DO NOT COMMIT)
+media/
+resumes/
+
+# Django collected static files
+staticfiles/
+
+# ==============================
+# Environment & Secrets
+# ==============================
+.env
+.env.*
+.env.local
+.env.production
+.env.development
+
+# API keys / credentials (extra safety)
+*.key
+*.pem
+*.crt
+secrets.json
+credentials.json
+service_account.json
+
+# ==============================
+# Virtual Environment
+# ==============================
+venv/
+myvenv/
+.envvenv/
+
+# ==============================
+# Editor / IDE
+# ==============================
+.vscode/
+.idea/
+*.swp
+
+# ==============================
+# OS Files
+# ==============================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==============================
+# AI / ML Artifacts
+# ==============================
+models/
+checkpoints/
+*.h5
+*.pkl
+*.joblib
+
+# ==============================
+# Cache & Temp Files
+# ==============================
+.cache/
+pytest_cache/
+coverage/
+htmlcov/
+
+# ==============================
+# Node / Frontend (if added later)
+# ==============================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ==============================
+# Reports / Generated Files
+# ==============================
+reports/
+exports/
+*.csv
+*.xlsx
+*.zip

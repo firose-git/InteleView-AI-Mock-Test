@@ -1,0 +1,55 @@
+
+{% extends 'aptitude/base_aptitude.html' %}
+{% load static %}
+{% block title %}InteleView – Instructions{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="card shadow-lg border-0">
+    <div class="card-body p-5">
+      <h2 class="text-center mb-4 text-primary fw-bold">📘 InteleView AI - Aptitude Test Instructions</h2>
+
+      <ul class="list-group list-group-flush fs-5">
+        <li class="list-group-item">🕒 <strong>Total Duration:</strong> 40 minutes</li>
+        <li class="list-group-item">🔢 <strong>Total Questions:</strong> 40 shuffled from Verbal, Reasoning, Numerical</li>
+        <li class="list-group-item">📂 <strong>Section Flow:</strong> You will proceed question-by-question. No skipping, no going back.</li>
+        <li class="list-group-item">🧠 <strong>Answer Format:</strong> Each question has 4 options. Only one is correct.</li>
+        <li class="list-group-item">📝 <strong>Calculator and Rough Work:</strong> Use your own rough sheet. On-screen calculator will be shown.</li>
+        <li class="list-group-item">🚫 <strong>No Negative Marking:</strong> Attempt all questions.</li>
+        <li class="list-group-item">🎥 <strong>Webcam Monitoring:</strong> Your webcam will be used to monitor eye movement and presence. Avoid looking down or away from screen repeatedly.</li>
+        <li class="list-group-item">🧭 <strong>Tab/Window Switch:</strong> Switching tabs, minimizing, or refreshing may lead to automatic test submission or disqualification.</li>
+        <li class="list-group-item">🔒 <strong>Full-Screen Lock:</strong> Test runs in full-screen. Exiting full-screen will trigger a warning or logout.</li>
+        <li class="list-group-item">📶 <strong>Connectivity:</strong> Make sure you have a stable internet connection. Interrupted connection will end the test.</li>
+        <li class="list-group-item">🎯 <strong>Score Validity:</strong> Your score will be stored securely and used for skill evaluation.</li>
+      </ul>
+
+      <div class="alert alert-warning mt-4 fs-6">
+        <strong>Note:</strong> Once the test starts, you cannot stop or pause. Please make sure you are ready before clicking the button below.
+      </div>
+
+      <div class="text-center mt-5">
+        <p class="text-muted mb-2">⏳ Test starts automatically in <span id="instruction-timer" class="fw-bold text-danger">02:00</span></p>
+        <a href="{% url 'aptitude:start_test_logic' %}" 
+   id="start-test-btn"
+   class="btn btn-lg btn-success px-5 py-3 fw-bold shadow disabled" 
+   data-url="{% url 'aptitude:start_test_logic' %}" 
+   tabindex="-1" 
+   aria-disabled="true">
+  ✅ Start InteleView Aptitude Test
+</a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
+
+<!-- {% block extra_js %}
+<script>
+  // Define login URL for JavaScript to use
+  const loginUrl = "{% url 'users:user_login' %}";
+</script>
+<script src="{% static 'aptitude/js/aptitude.js' %}"></script>
+{% endblock %} -->

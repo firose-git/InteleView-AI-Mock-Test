@@ -1,0 +1,4502 @@
+[
+    {
+        "id": 1,
+        "question_type": "mcq",
+        "question_text": "Which data structure follows the LIFO (Last-In, First-Out) principle?",
+        "options": {
+            "A": "Queue",
+            "B": "Stack",
+            "C": "Linked List",
+            "D": "Tree"
+        },
+        "correct_answer": "B",
+        "domain": "Data Structures",
+        "explanation": "A stack is a linear data structure that follows the LIFO principle, meaning the last element added is the first one to be removed.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 2,
+        "question_type": "mcq",
+        "question_text": "What is the worst-case time complexity of the Bubble Sort algorithm?",
+        "options": {
+            "A": "O(n)",
+            "B": "O(log n)",
+            "C": "O(n^2)",
+            "D": "O(n log n)"
+        },
+        "correct_answer": "C",
+        "domain": "Algorithms",
+        "explanation": "Bubble Sort has a worst-case time complexity of O(n^2) because it may need to iterate through the entire list multiple times to sort it.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 3,
+        "question_type": "mcq",
+        "question_text": "Which of the following is the correct way to comment a single line in Python?",
+        "options": {
+            "A": "// This is a comment",
+            "B": "/* This is a comment */",
+            "C": "# This is a comment",
+            "D": "&lt;!-- This is a comment --&gt;"
+        },
+        "correct_answer": "C",
+        "domain": "Python",
+        "explanation": "In Python, single-line comments start with a '#' symbol.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 4,
+        "question_type": "mcq",
+        "question_text": "Which keyword is used to prevent a class from being inherited in Java?",
+        "options": {
+            "A": "static",
+            "B": "final",
+            "C": "abstract",
+            "D": "private"
+        },
+        "correct_answer": "B",
+        "domain": "Java",
+        "explanation": "The 'final' keyword prevents a class from being subclassed.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 5,
+        "question_type": "mcq",
+        "question_text": "Which of these is NOT a relational or logical operator in C?",
+        "options": {
+            "A": "=",
+            "B": "==",
+            "C": "&&",
+            "D": "||"
+        },
+        "correct_answer": "A",
+        "domain": "C Programming",
+        "explanation": "The '=' operator is an assignment operator, not a relational or logical operator.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 6,
+        "question_type": "mcq",
+        "question_text": "Which HTML tag is used to create an unordered list?",
+        "options": {
+            "A": "&lt;ul&gt;",
+            "B": "&lt;ol&gt;",
+            "C": "&lt;li&gt;",
+            "D": "&lt;dl&gt;"
+        },
+        "correct_answer": "A",
+        "domain": "HTML",
+        "explanation": "The '<ul>' tag creates an unordered (bulleted) list.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 7,
+        "question_type": "mcq",
+        "question_text": "Which CSS property is used to change the background color of an element?",
+        "options": {
+            "A": "color",
+            "B": "background-color",
+            "C": "font-color",
+            "D": "text-color"
+        },
+        "correct_answer": "B",
+        "domain": "CSS",
+        "explanation": "The 'background-color' property sets the background color of an element.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 8,
+        "question_type": "mcq",
+        "question_text": "Which of the following is NOT a valid JavaScript data type?",
+        "options": {
+            "A": "number",
+            "B": "string",
+            "C": "boolean",
+            "D": "float"
+        },
+        "correct_answer": "D",
+        "domain": "JavaScript",
+        "explanation": "JavaScript has a single 'number' data type that handles both integers and floating-point numbers. 'float' is not a distinct data type.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 9,
+        "question_type": "mcq",
+        "question_text": "Which SQL keyword is used to retrieve data from a database?",
+        "options": {
+            "A": "UPDATE",
+            "B": "INSERT",
+            "C": "SELECT",
+            "D": "DELETE"
+        },
+        "correct_answer": "C",
+        "domain": "SQL",
+        "explanation": "The SELECT statement is used to retrieve data from a database.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 10,
+        "question_type": "mcq",
+        "question_text": "Which of the following is comprised within AI?",
+        "options": {
+            "A": "Machine Learning",
+            "B": "Deep Learning",
+            "C": "Both A and B",
+            "D": "None of the above"
+        },
+        "correct_answer": "C",
+        "domain": "Artificial Intelligence",
+        "explanation": "Both Machine Learning and Deep Learning are sub-categories of Artificial Intelligence.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 11,
+        "question_type": "mcq",
+        "question_text": "Which command is used to create a new database in MongoDB?",
+        "options": {
+            "A": "use database_name",
+            "B": "create database_name",
+            "C": "db.create(database_name)",
+            "D": "new database_name"
+        },
+        "correct_answer": "A",
+        "domain": "MongoDB",
+        "explanation": "In MongoDB, the 'use database_name' command switches to or creates a new database if it doesn't exist.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 12,
+        "question_type": "mcq",
+        "question_text": "Which data structure is used for breadth-first traversal of a graph?",
+        "options": {
+            "A": "Stack",
+            "B": "Graph",
+            "C": "Queue",
+            "D": "Tree"
+        },
+        "correct_answer": "C",
+        "domain": "Data Structures",
+        "explanation": "A queue is used for breadth-first traversal of a graph, as it processes nodes level by level.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 13,
+        "question_type": "mcq",
+        "question_text": "What is the best-case time complexity of the binary search algorithm?",
+        "options": {
+            "A": "O(1)",
+            "B": "O(log n)",
+            "C": "O(n)",
+            "D": "O(n^2)"
+        },
+        "correct_answer": "A",
+        "domain": "Algorithms",
+        "explanation": "The best-case time complexity of binary search is O(1) when the target is found at the middle of the array.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 14,
+        "question_type": "mcq",
+        "question_text": "What is the output of the following Python code? \n```python\ndef my_func(x):\n x = x + 5\n return x\n\na = 10\nb = my_func(a)\nprint(a)\n```",
+        "options": {
+            "A": "10",
+            "B": "15",
+            "C": "Error",
+            "D": "None of the above"
+        },
+        "correct_answer": "A",
+        "domain": "Python",
+        "explanation": "In Python, integers are passed by value. The function creates a local copy of 'a', modifies it, but doesn't affect the original 'a'.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 15,
+        "question_type": "mcq",
+        "question_text": "What is the output of the following Java code? \n```java\npublic class Main {\n public static void main(String[] args) {\n String s1 = \"hello\";\n String s2 = new String(\"hello\");\n System.out.println(s1 == s2);\n }\n}\n```",
+        "options": {
+            "A": "true",
+            "B": "false",
+            "C": "Compilation Error",
+            "D": "Runtime Error"
+        },
+        "correct_answer": "B",
+        "domain": "Java",
+        "explanation": "In Java, '==' compares object references. 's1' and 's2' refer to different objects in memory.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 16,
+        "question_type": "mcq",
+        "question_text": "What is the return type of the fopen() function in C?",
+        "options": {
+            "A": "Pointer to a FILE object",
+            "B": "int",
+            "C": "void",
+            "D": "char"
+        },
+        "correct_answer": "A",
+        "domain": "C Programming",
+        "explanation": "The fopen() function returns a pointer to a FILE object, used to manage file operations.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 17,
+        "question_type": "mcq",
+        "question_text": "Which HTML tag is used to define a short quotation?",
+        "options": {
+            "A": "&lt;quotation&gt;",
+            "B": "&lt;quote&gt;",
+            "C": "&lt;qut&gt;",
+            "D": "&lt;q&gt;"
+        },
+        "correct_answer": "D",
+        "domain": "HTML",
+        "explanation": "The <q> tag is used to define a short quotation in HTML.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 18,
+        "question_type": "mcq",
+        "question_text": "Which is a valid way to represent a color in CSS?",
+        "options": {
+            "A": "A valid color name like 'blue'",
+            "B": "HEX code like '#0000ff'",
+            "C": "RGB value like 'rgb(0,0,255)'",
+            "D": "All of the above"
+        },
+        "correct_answer": "D",
+        "domain": "CSS",
+        "explanation": "CSS supports color representation through color names, HEX codes, and RGB values.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 19,
+        "question_type": "mcq",
+        "question_text": "Which JavaScript method is used to access an HTML element by id?",
+        "options": {
+            "A": "getElementById()",
+            "B": "getElement(id)",
+            "C": "getElementById(id)",
+            "D": "elementById(id)"
+        },
+        "correct_answer": "A",
+        "domain": "JavaScript",
+        "explanation": "The document.getElementById() method is used to access an HTML element by its id.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 20,
+        "question_type": "mcq",
+        "question_text": "Which clause is used to filter records in SQL?",
+        "options": {
+            "A": "GROUP BY",
+            "B": "ORDER BY",
+            "C": "WHERE",
+            "D": "HAVING"
+        },
+        "correct_answer": "C",
+        "domain": "SQL",
+        "explanation": "The WHERE clause is used to filter records in an SQL query.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 21,
+        "question_type": "mcq",
+        "question_text": "Which human behavior does AI primarily aim to mimic?",
+        "options": {
+            "A": "Thinking",
+            "B": "Eating",
+            "C": "Sleeping",
+            "D": "None of the above"
+        },
+        "correct_answer": "A",
+        "domain": "Artificial Intelligence",
+        "explanation": "AI aims to mimic human thinking and decision-making processes.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 22,
+        "question_type": "mcq",
+        "question_text": "Which MongoDB method is used to insert a single document into a collection?",
+        "options": {
+            "A": "insertOne()",
+            "B": "insert()",
+            "C": "addOne()",
+            "D": "insertDocument()"
+        },
+        "correct_answer": "A",
+        "domain": "MongoDB",
+        "explanation": "The insertOne() method is used to insert a single document into a MongoDB collection.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 23,
+        "question_type": "mcq",
+        "question_text": "Which data structure is best suited for implementing a priority queue efficiently?",
+        "options": {
+            "A": "Array",
+            "B": "Linked List",
+            "C": "Stack",
+            "D": "Heap"
+        },
+        "correct_answer": "D",
+        "domain": "Data Structures",
+        "explanation": "A heap is best suited for a priority queue due to its efficient insertion and deletion operations.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 24,
+        "question_type": "mcq",
+        "question_text": "Which algorithm is known as a Divide and Conquer algorithm?",
+        "options": {
+            "A": "Bubble Sort",
+            "B": "Selection Sort",
+            "C": "Insertion Sort",
+            "D": "Merge Sort"
+        },
+        "correct_answer": "D",
+        "domain": "Algorithms",
+        "explanation": "Merge Sort divides the array into smaller subarrays, sorts them, and merges them back.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 25,
+        "question_type": "mcq",
+        "question_text": "What is the purpose of a lambda function in Python?",
+        "options": {
+            "A": "To define a named function",
+            "B": "To create an anonymous function",
+            "C": "To import modules",
+            "D": "To handle exceptions"
+        },
+        "correct_answer": "B",
+        "domain": "Python",
+        "explanation": "Lambda functions are anonymous functions defined using the lambda keyword for short-term use.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 26,
+        "question_type": "mcq",
+        "question_text": "Which class in Java is used to take input from the user?",
+        "options": {
+            "A": "Scanner",
+            "B": "Input",
+            "C": "Reader",
+            "D": "Console"
+        },
+        "correct_answer": "A",
+        "domain": "Java",
+        "explanation": "The Scanner class in the java.util package is used to get user input.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 27,
+        "question_type": "mcq",
+        "question_text": "What is the output of the following C code? \n```c\n#include <stdio.h>\nint main() {\n int x = 2;\n printf(\"%d\", (x << 1) + (x >> 1));\n return 0;\n}\n```",
+        "options": {
+            "A": "5",
+            "B": "3",
+            "C": "4",
+            "D": "6"
+        },
+        "correct_answer": "A",
+        "domain": "C Programming",
+        "explanation": "Left shift (x << 1) gives 4, right shift (x >> 1) gives 1, so 4 + 1 = 5.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 28,
+        "question_type": "mcq",
+        "question_text": "Which tag is the root element of an HTML page?",
+        "options": {
+            "A": "&lt;html&gt;",
+            "B": "&lt;head&gt;",
+            "C": "&lt;body&gt;",
+            "D": "&lt;title&gt;"
+        },
+        "correct_answer": "A",
+        "domain": "HTML",
+        "explanation": "The <html> tag is the root element of an HTML page, containing all other elements.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 29,
+        "question_type": "mcq",
+        "question_text": "Which property is used to define the text color in CSS?",
+        "options": {
+            "A": "font-color",
+            "B": "color",
+            "C": "text-color",
+            "D": "background-color"
+        },
+        "correct_answer": "B",
+        "domain": "CSS",
+        "explanation": "The color property is used to define the text color in CSS.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 30,
+        "question_type": "mcq",
+        "question_text": "Which method is used to write on the browser's console?",
+        "options": {
+            "A": "console.write()",
+            "B": "console.output()",
+            "C": "console.log()",
+            "D": "console.printHTML()"
+        },
+        "correct_answer": "C",
+        "domain": "JavaScript",
+        "explanation": "The console.log() method is used to write messages to the browser's console.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 31,
+        "question_type": "mcq",
+        "question_text": "What is the default sorting order in the ORDER BY clause?",
+        "options": {
+            "A": "DESC",
+            "B": "ASC",
+            "C": "RANDOM",
+            "D": "NONE"
+        },
+        "correct_answer": "B",
+        "domain": "SQL",
+        "explanation": "The default sorting order in the ORDER BY clause is ascending (ASC).",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 32,
+        "question_type": "mcq",
+        "question_text": "What does the term PEAS stand for in AI?",
+        "options": {
+            "A": "Performance, Environment, Actuators, Sensors",
+            "B": "Plan, Execute, Analyze, Study",
+            "C": "Predict, Evaluate, Act, Sense",
+            "D": "Program, Environment, Action, State"
+        },
+        "correct_answer": "A",
+        "domain": "Artificial Intelligence",
+        "explanation": "PEAS stands for Performance, Environment, Actuators, and Sensors, defining an AI agent's characteristics.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 33,
+        "question_type": "mcq",
+        "question_text": "What is the primary key field automatically added by MongoDB to each document?",
+        "options": {
+            "A": "_id",
+            "B": "key",
+            "C": "pk",
+            "D": "id"
+        },
+        "correct_answer": "A",
+        "domain": "MongoDB",
+        "explanation": "MongoDB automatically adds a unique '_id' field as the primary key for each document.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 34,
+        "question_type": "mcq",
+        "question_text": "What is the minimum number of spanning trees in a connected graph?",
+        "options": {
+            "A": "1",
+            "B": "n",
+            "C": "n*n",
+            "D": "0"
+        },
+        "correct_answer": "A",
+        "domain": "Data Structures",
+        "explanation": "Every connected graph has at least one spanning tree.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 35,
+        "question_type": "mcq",
+        "question_text": "Which algorithm is used for the 8 Queens problem?",
+        "options": {
+            "A": "Greedy",
+            "B": "Dynamic Programming",
+            "C": "Backtracking",
+            "D": "Divide and Conquer"
+        },
+        "correct_answer": "C",
+        "domain": "Algorithms",
+        "explanation": "The 8 Queens problem is solved using backtracking to try all possible placements.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 36,
+        "question_type": "mcq",
+        "question_text": "Which Python feature allows creating a function that can generate a sequence of values over time?",
+        "options": {
+            "A": "Lambda",
+            "B": "Generator",
+            "C": "Decorator",
+            "D": "Closure"
+        },
+        "correct_answer": "B",
+        "domain": "Python",
+        "explanation": "Generators in Python use the yield keyword to produce a sequence of values lazily.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 37,
+        "question_type": "mcq",
+        "question_text": "What makes Java platform-independent?",
+        "options": {
+            "A": "Advanced programming language",
+            "B": "Bytecode execution",
+            "C": "Class compilation",
+            "D": "All of these"
+        },
+        "correct_answer": "B",
+        "domain": "Java",
+        "explanation": "Java's platform independence comes from compiling to bytecode, which runs on the JVM.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 38,
+        "question_type": "mcq",
+        "question_text": "Which is not a valid keyword in C language?",
+        "options": {
+            "A": "for",
+            "B": "while",
+            "C": "do-while",
+            "D": "switch"
+        },
+        "correct_answer": "C",
+        "domain": "C Programming",
+        "explanation": "do-while is not a keyword; 'do' and 'while' are separate keywords.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 39,
+        "question_type": "mcq",
+        "question_text": "Which tag contains meta information about an HTML page?",
+        "options": {
+            "A": "&lt;html&gt;",
+            "B": "&lt;title&gt;",
+            "C": "&lt;head&gt;",
+            "D": "&lt;body&gt;"
+        },
+        "correct_answer": "C",
+        "domain": "HTML",
+        "explanation": "The <head> tag contains meta information like title, links, and scripts.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 40,
+        "question_type": "mcq",
+        "question_text": "How are internal styles defined in an HTML page?",
+        "options": {
+            "A": "&lt;style&gt;\u2026&lt;/style&gt;",
+            "B": "&lt;css&gt;\u2026&lt;/css&gt;",
+            "C": "&lt;stylesheet&gt;\u2026&lt;/stylesheet&gt;",
+            "D": "style attribute"
+        },
+        "correct_answer": "A",
+        "domain": "CSS",
+        "explanation": "Internal styles are defined within the <style> element in the <head> section.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 41,
+        "question_type": "mcq",
+        "question_text": "Which symbol separates JavaScript statements?",
+        "options": {
+            "A": "Comma (,)",
+            "B": "Colon (:)",
+            "C": "Hyphen (-)",
+            "D": "Semicolon (;)"
+        },
+        "correct_answer": "D",
+        "domain": "JavaScript",
+        "explanation": "The semicolon (;) is used to separate JavaScript statements.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 42,
+        "question_type": "mcq",
+        "question_text": "Which command deletes all records but keeps the table structure?",
+        "options": {
+            "A": "DROP",
+            "B": "DELETE",
+            "C": "TRUNCATE",
+            "D": "REMOVE"
+        },
+        "correct_answer": "C",
+        "domain": "SQL",
+        "explanation": "TRUNCATE removes all records but retains the table structure.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 43,
+        "question_type": "mcq",
+        "question_text": "Which is not a goal of an AI agent?",
+        "options": {
+            "A": "Perceiving data",
+            "B": "Adapting to environments",
+            "C": "Reversing previous actions",
+            "D": "Acting on the environment"
+        },
+        "correct_answer": "C",
+        "domain": "Artificial Intelligence",
+        "explanation": "Reversing previous actions is not a primary goal of AI agents.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 44,
+        "question_type": "mcq",
+        "question_text": "Which operator in MongoDB is used to query for equality?",
+        "options": {
+            "A": "$eq",
+            "B": "$equal",
+            "C": "$match",
+            "D": "$same"
+        },
+        "correct_answer": "A",
+        "domain": "MongoDB",
+        "explanation": "The $eq operator is used to query documents where a field equals a specified value.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 45,
+        "question_type": "mcq",
+        "question_text": "Which data structure is used to check if an expression has matching parentheses?",
+        "options": {
+            "A": "Tree",
+            "B": "Queue",
+            "C": "Stack",
+            "D": "Linked List"
+        },
+        "correct_answer": "C",
+        "domain": "Data Structures",
+        "explanation": "A stack is used to check matching parentheses due to its LIFO property.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 46,
+        "question_type": "mcq",
+        "question_text": "What is the time complexity of merging two sorted lists of sizes m and n?",
+        "options": {
+            "A": "O(m)",
+            "B": "O(n)",
+            "C": "O(m + n)",
+            "D": "O(m * n)"
+        },
+        "correct_answer": "C",
+        "domain": "Algorithms",
+        "explanation": "Merging two sorted lists requires traversing both lists once, resulting in O(m + n) time.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 47,
+        "question_type": "mcq",
+        "question_text": "What is the output of the following code? \n```python\nx = [1, 2, 3]\ny = x\ny.append(4)\nprint(x)\n```",
+        "options": {
+            "A": "[1, 2, 3]",
+            "B": "[1, 2, 3, 4]",
+            "C": "Error",
+            "D": "None"
+        },
+        "correct_answer": "B",
+        "domain": "Python",
+        "explanation": "Lists are mutable, and y refers to the same list as x, so appending to y affects x.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 48,
+        "question_type": "mcq",
+        "question_text": "Which keyword in Java is used for exception handling?",
+        "options": {
+            "A": "exep",
+            "B": "try",
+            "C": "throw",
+            "D": "catch"
+        },
+        "correct_answer": "C",
+        "domain": "Java",
+        "explanation": "The 'throw' keyword is used to throw an exception in Java.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 49,
+        "question_type": "mcq",
+        "question_text": "How many whitespace characters are allowed in C language?",
+        "options": {
+            "A": "2",
+            "B": "3",
+            "C": "4",
+            "D": "5"
+        },
+        "correct_answer": "D",
+        "domain": "C Programming",
+        "explanation": "C allows five whitespace characters: space, horizontal tab, vertical tab, form feed, and newline.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 50,
+        "question_type": "mcq",
+        "question_text": "Which HTML tag is used to define a hyperlink?",
+        "options": {
+            "A": "&lt;a&gt;",
+            "B": "&lt;h&gt;",
+            "C": "&lt;hyperlink&gt;",
+            "D": "&lt;link&gt;"
+        },
+        "correct_answer": "A",
+        "domain": "HTML",
+        "explanation": "The <a> tag defines a hyperlink in HTML.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 51,
+        "question_type": "mcq",
+        "question_text": "Which tag is used to include an external CSS file?",
+        "options": {
+            "A": "&lt;link&gt;",
+            "B": "&lt;style&gt;",
+            "C": "&lt;css&gt;",
+            "D": "&lt;stylesheet&gt;"
+        },
+        "correct_answer": "A",
+        "domain": "CSS",
+        "explanation": "The <link> tag with rel='stylesheet' is used to include an external CSS file.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 52,
+        "question_type": "mcq",
+        "question_text": "What is the default value of an uninitialized variable in JavaScript?",
+        "options": {
+            "A": "0",
+            "B": "undefined",
+            "C": "null",
+            "D": "NaN"
+        },
+        "correct_answer": "B",
+        "domain": "JavaScript",
+        "explanation": "An uninitialized variable in JavaScript has the default value of undefined.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 53,
+        "question_type": "mcq",
+        "question_text": "Which SQL keyword is used to sort data?",
+        "options": {
+            "A": "GROUP BY",
+            "B": "ORDER BY",
+            "C": "SORT BY",
+            "D": "ARRANGE"
+        },
+        "correct_answer": "B",
+        "domain": "SQL",
+        "explanation": "The ORDER BY keyword is used to sort data in SQL.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 54,
+        "question_type": "mcq",
+        "question_text": "Which AI agent type focuses on meeting user preferences?",
+        "options": {
+            "A": "Simple Reflex Agent",
+            "B": "Model-Based Reflex Agent",
+            "C": "Goal-Based Agent",
+            "D": "Utility-Based Agent"
+        },
+        "correct_answer": "D",
+        "domain": "Artificial Intelligence",
+        "explanation": "Utility-based agents focus on maximizing user preferences and satisfaction.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 55,
+        "question_type": "mcq",
+        "question_text": "Which method is used to update a single document in MongoDB?",
+        "options": {
+            "A": "updateOne()",
+            "B": "update()",
+            "C": "modifyOne()",
+            "D": "setOne()"
+        },
+        "correct_answer": "A",
+        "domain": "MongoDB",
+        "explanation": "The updateOne() method updates a single document that matches the specified filter.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 56,
+        "question_type": "mcq",
+        "question_text": "Which data structure is used for depth-first traversal of a graph?",
+        "options": {
+            "A": "Stack",
+            "B": "Queue",
+            "C": "Tree",
+            "D": "Array"
+        },
+        "correct_answer": "A",
+        "domain": "Data Structures",
+        "explanation": "A stack is used for depth-first traversal due to its LIFO property.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 57,
+        "question_type": "mcq",
+        "question_text": "Which sorting algorithm uses a pivot to partition unsorted lists?",
+        "options": {
+            "A": "Insertion Sort",
+            "B": "Quick Sort",
+            "C": "Merge Sort",
+            "D": "Bubble Sort"
+        },
+        "correct_answer": "B",
+        "domain": "Algorithms",
+        "explanation": "Quick Sort uses a pivot to partition the array and recursively sorts sub-arrays.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 58,
+        "question_type": "mcq",
+        "question_text": "Which Python feature is used to modify the behavior of a function?",
+        "options": {
+            "A": "Lambda",
+            "B": "Generator",
+            "C": "Decorator",
+            "D": "Closure"
+        },
+        "correct_answer": "C",
+        "domain": "Python",
+        "explanation": "Decorators are used to modify or extend the behavior of functions in Python.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 59,
+        "question_type": "mcq",
+        "question_text": "What is the output of the following Java code? \n```java\npublic class Main {\n public static void main(String args[]) {\n int i;\n for (i = 1; i <= 12; i += 2) {\n if (i == 8) {\n System.out.println(i);\n break;\n }\n }\n }\n}\n```",
+        "options": {
+            "A": "1",
+            "B": "No output",
+            "C": "8",
+            "D": "1357911"
+        },
+        "correct_answer": "B",
+        "domain": "Java",
+        "explanation": "The condition (i == 8) is never satisfied, so no output is printed.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 60,
+        "question_type": "mcq",
+        "question_text": "What is the extension of a C language source file?",
+        "options": {
+            "A": ".c",
+            "B": ".cpp",
+            "C": ".c99",
+            "D": ".h"
+        },
+        "correct_answer": "A",
+        "domain": "C Programming",
+        "explanation": "The extension of a C language source file is '.c'.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 61,
+        "question_type": "mcq",
+        "question_text": "Which HTML attribute specifies the destination URL of a hyperlink?",
+        "options": {
+            "A": "src",
+            "B": "href",
+            "C": "link",
+            "D": "url"
+        },
+        "correct_answer": "B",
+        "domain": "HTML",
+        "explanation": "The href attribute in the <a> tag specifies the destination URL.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 62,
+        "question_type": "mcq",
+        "question_text": "How are CSS comments written?",
+        "options": {
+            "A": "//",
+            "B": "/* */",
+            "C": "&lt;* *&gt;",
+            "D": "&lt;! !&gt;"
+        },
+        "correct_answer": "B",
+        "domain": "CSS",
+        "explanation": "CSS comments are written using /* and */.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 63,
+        "question_type": "mcq",
+        "question_text": "Which method is used to write HTML output in JavaScript?",
+        "options": {
+            "A": "document.write()",
+            "B": "document.output()",
+            "C": "console.log()",
+            "D": "document.writeHTML()"
+        },
+        "correct_answer": "A",
+        "domain": "JavaScript",
+        "explanation": "The document.write() method writes HTML output to the document.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 64,
+        "question_type": "mcq",
+        "question_text": "Which SQL function is used to count the number of rows?",
+        "options": {
+            "A": "SUM()",
+            "B": "COUNT()",
+            "C": "TOTAL()",
+            "D": "ADD()"
+        },
+        "correct_answer": "B",
+        "domain": "SQL",
+        "explanation": "The COUNT() function returns the number of rows in a result set.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 65,
+        "question_type": "mcq",
+        "question_text": "Which environment classification determines if variables are constant or changing?",
+        "options": {
+            "A": "Deterministic and Non-Deterministic",
+            "B": "Observable and Partially-Observable",
+            "C": "Static and Dynamic",
+            "D": "Accessible and Inaccessible"
+        },
+        "correct_answer": "C",
+        "domain": "Artificial Intelligence",
+        "explanation": "Static and Dynamic classifications determine whether environment variables are constant or changing.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 66,
+        "question_type": "mcq",
+        "question_text": "Which command is used to delete a single document in MongoDB?",
+        "options": {
+            "A": "deleteOne()",
+            "B": "removeOne()",
+            "C": "dropOne()",
+            "D": "eraseOne()"
+        },
+        "correct_answer": "A",
+        "domain": "MongoDB",
+        "explanation": "The deleteOne() method removes a single document that matches the specified filter.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 67,
+        "question_type": "mcq",
+        "question_text": "How many edges are required to form a cyclic graph with n vertices?",
+        "options": {
+            "A": "n-1",
+            "B": "2n",
+            "C": "n",
+            "D": "n+1"
+        },
+        "correct_answer": "C",
+        "domain": "Data Structures",
+        "explanation": "A cyclic graph requires at least n edges to form a cycle with n vertices.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 68,
+        "question_type": "mcq",
+        "question_text": "Which search algorithm does not require the data to be sorted?",
+        "options": {
+            "A": "Binary Search",
+            "B": "Interpolation Search",
+            "C": "Linear Search",
+            "D": "Jump Search"
+        },
+        "correct_answer": "C",
+        "domain": "Algorithms",
+        "explanation": "Linear Search does not require sorted data, unlike Binary or Interpolation Search.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 69,
+        "question_type": "mcq",
+        "question_text": "Which Python keyword is used to define a class?",
+        "options": {
+            "A": "struct",
+            "B": "class",
+            "C": "object",
+            "D": "type"
+        },
+        "correct_answer": "B",
+        "domain": "Python",
+        "explanation": "The 'class' keyword is used to define a class in Python.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 70,
+        "question_type": "mcq",
+        "question_text": "Which type of casting in Java is lossy?",
+        "options": {
+            "A": "Widening",
+            "B": "Narrowing",
+            "C": "Explicit",
+            "D": "Implicit"
+        },
+        "correct_answer": "B",
+        "domain": "Java",
+        "explanation": "Narrowing casting can result in data loss due to converting to a smaller type.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 71,
+        "question_type": "mcq",
+        "question_text": "What is the output of the following C code? \n```c\n#include <stdio.h>\nint main() {\n int a = 10;\n int *p = &a;\n int **q = &p;\n printf(\"%d\", **q);\n return 0;\n}\n```",
+        "options": {
+            "A": "Address of a",
+            "B": "Address of p",
+            "C": "10",
+            "D": "Error"
+        },
+        "correct_answer": "C",
+        "domain": "C Programming",
+        "explanation": "**q dereferences q to get p, then dereferences p to get the value of a, which is 10.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 72,
+        "question_type": "mcq",
+        "question_text": "Which HTML tag is used to define preformatted text?",
+        "options": {
+            "A": "&lt;pf&gt;",
+            "B": "&lt;p&gt;",
+            "C": "&lt;pre&gt;",
+            "D": "&lt;code&gt;"
+        },
+        "correct_answer": "C",
+        "domain": "HTML",
+        "explanation": "The <pre> tag is used to define preformatted text in HTML.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 73,
+        "question_type": "mcq",
+        "question_text": "Which CSS property is used to set the font size?",
+        "options": {
+            "A": "font-size",
+            "B": "text-size",
+            "C": "size",
+            "D": "font-style"
+        },
+        "correct_answer": "A",
+        "domain": "CSS",
+        "explanation": "The font-size property sets the size of the text in CSS.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 74,
+        "question_type": "mcq",
+        "question_text": "What is the output of the following JavaScript code? \n```javascript\nvar a = 10 + 20 + \"5\";\ndocument.getElementById(\"demo\").innerHTML = a;\n```",
+        "options": {
+            "A": "35",
+            "B": "305",
+            "C": "TypeError",
+            "D": "ValueError"
+        },
+        "correct_answer": "B",
+        "domain": "JavaScript",
+        "explanation": "JavaScript performs addition left to right; 10 + 20 = 30, then 30 + '5' results in string concatenation to '305'.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 75,
+        "question_type": "mcq",
+        "question_text": "Which SQL clause is used to group rows with similar values?",
+        "options": {
+            "A": "WHERE",
+            "B": "GROUP BY",
+            "C": "HAVING",
+            "D": "ORDER BY"
+        },
+        "correct_answer": "B",
+        "domain": "SQL",
+        "explanation": "The GROUP BY clause groups rows with similar values into summary rows.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 76,
+        "question_type": "mcq",
+        "question_text": "Which search algorithm is considered a heuristic search?",
+        "options": {
+            "A": "Breadth-First Search",
+            "B": "Depth-First Search",
+            "C": "Best-First Search",
+            "D": "Random Search"
+        },
+        "correct_answer": "C",
+        "domain": "Artificial Intelligence",
+        "explanation": "Best-First Search uses a heuristic to guide the search towards the goal.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 77,
+        "question_type": "mcq",
+        "question_text": "Which MongoDB operator is used to select documents where a field is greater than a value?",
+        "options": {
+            "A": "$gt",
+            "B": "$gte",
+            "C": "$lt",
+            "D": "$lte"
+        },
+        "correct_answer": "A",
+        "domain": "MongoDB",
+        "explanation": "The $gt operator selects documents where a field is greater than a specified value.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 78,
+        "question_type": "mcq",
+        "question_text": "Which data structure exhibits O(1) search efficiency?",
+        "options": {
+            "A": "Stack",
+            "B": "Queue",
+            "C": "Hashtable",
+            "D": "Heap"
+        },
+        "correct_answer": "C",
+        "domain": "Data Structures",
+        "explanation": "Hashtables provide O(1) average-case time complexity for search operations.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 79,
+        "question_type": "mcq",
+        "question_text": "What is the minimum number of moves required to solve the Tower of Hanoi problem with n disks?",
+        "options": {
+            "A": "n",
+            "B": "2n",
+            "C": "2n-1",
+            "D": "2^n-1"
+        },
+        "correct_answer": "D",
+        "domain": "Algorithms",
+        "explanation": "The Tower of Hanoi requires 2^n-1 moves to solve for n disks.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 80,
+        "question_type": "mcq",
+        "question_text": "Which Python method is used to open a file for reading?",
+        "options": {
+            "A": "open('file.txt', 'w')",
+            "B": "open('file.txt', 'r')",
+            "C": "read('file.txt')",
+            "D": "file('file.txt')"
+        },
+        "correct_answer": "B",
+        "domain": "Python",
+        "explanation": "The open('file.txt', 'r') method opens a file in read mode.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 81,
+        "question_type": "mcq",
+        "question_text": "What is garbage collection in Java?",
+        "options": {
+            "A": "Memory management process",
+            "B": "Creating new objects",
+            "C": "Deleting all values",
+            "D": "Manual memory allocation"
+        },
+        "correct_answer": "A",
+        "domain": "Java",
+        "explanation": "Garbage collection in Java is an automatic memory management process.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 82,
+        "question_type": "mcq",
+        "question_text": "How many bytes does a char type take in C?",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "4",
+            "D": "8"
+        },
+        "correct_answer": "A",
+        "domain": "C Programming",
+        "explanation": "A char type takes 1 byte in C.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 83,
+        "question_type": "mcq",
+        "question_text": "Which HTML tag is used to define bold text without extra importance?",
+        "options": {
+            "A": "&lt;strong&gt;",
+            "B": "&lt;bold&gt;",
+            "C": "&lt;bolder&gt;",
+            "D": "&lt;b&gt;"
+        },
+        "correct_answer": "D",
+        "domain": "HTML",
+        "explanation": "The <b> tag defines bold text without implying importance.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 84,
+        "question_type": "mcq",
+        "question_text": "Can CSS comments span multiple lines?",
+        "options": {
+            "A": "Yes",
+            "B": "No",
+            "C": "Only inline",
+            "D": "Only single-line"
+        },
+        "correct_answer": "A",
+        "domain": "CSS",
+        "explanation": "CSS comments can span multiple lines using /* */.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 85,
+        "question_type": "mcq",
+        "question_text": "Which keyword is used to declare a variable in JavaScript?",
+        "options": {
+            "A": "var",
+            "B": "let",
+            "C": "const",
+            "D": "All of the above"
+        },
+        "correct_answer": "D",
+        "domain": "JavaScript",
+        "explanation": "var, let, and const are all used to declare variables in JavaScript.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 86,
+        "question_type": "mcq",
+        "question_text": "Which SQL function returns the average of a column?",
+        "options": {
+            "A": "SUM()",
+            "B": "AVG()",
+            "C": "MEAN()",
+            "D": "AVERAGE()"
+        },
+        "correct_answer": "B",
+        "domain": "SQL",
+        "explanation": "The AVG() function returns the average value of a numeric column.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 87,
+        "question_type": "mcq",
+        "question_text": "What is a valid AI agent type?",
+        "options": {
+            "A": "Simple Reflex Agent",
+            "B": "Model-Based Reflex Agent",
+            "C": "Goal-Based Agent",
+            "D": "All of the above"
+        },
+        "correct_answer": "D",
+        "domain": "Artificial Intelligence",
+        "explanation": "All listed types are valid AI agent types.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 88,
+        "question_type": "mcq",
+        "question_text": "Which MongoDB command is used to find all documents in a collection?",
+        "options": {
+            "A": "find()",
+            "B": "findAll()",
+            "C": "select()",
+            "D": "query()"
+        },
+        "correct_answer": "A",
+        "domain": "MongoDB",
+        "explanation": "The find() command retrieves all documents in a MongoDB collection that match a query.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 89,
+        "question_type": "mcq",
+        "question_text": "Which data structure is used to implement recursion in C?",
+        "options": {
+            "A": "Stack",
+            "B": "Queue",
+            "C": "Array",
+            "D": "Linked List"
+        },
+        "correct_answer": "A",
+        "domain": "Data Structures",
+        "explanation": "Recursion uses a stack to store function call information.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 90,
+        "question_type": "mcq",
+        "question_text": "What kind of algorithm is Kruskal's algorithm?",
+        "options": {
+            "A": "Divide and Conquer",
+            "B": "Greedy",
+            "C": "Dynamic Programming",
+            "D": "Backtracking"
+        },
+        "correct_answer": "B",
+        "domain": "Algorithms",
+        "explanation": "Kruskal's algorithm is a greedy algorithm for finding the minimum spanning tree.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 91,
+        "question_type": "mcq",
+        "question_text": "Which Python standard library module is used for file operations?",
+        "options": {
+            "A": "os",
+            "B": "sys",
+            "C": "io",
+            "D": "file"
+        },
+        "correct_answer": "C",
+        "domain": "Python",
+        "explanation": "The io module provides classes for file input/output operations.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 92,
+        "question_type": "mcq",
+        "question_text": "Can a Java program be written without a main method?",
+        "options": {
+            "A": "Yes",
+            "B": "No",
+            "C": "Only in JDK 5 or earlier",
+            "D": "Only in JDK 6 or later"
+        },
+        "correct_answer": "C",
+        "domain": "Java",
+        "explanation": "In JDK 5 or earlier, a Java program could run without a main method under certain conditions.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 93,
+        "question_type": "mcq",
+        "question_text": "Which is the correct format specifier for double type in C?",
+        "options": {
+            "A": "%d",
+            "B": "%f",
+            "C": "%lf",
+            "D": "%LF"
+        },
+        "correct_answer": "C",
+        "domain": "C Programming",
+        "explanation": "The %lf format specifier is used for double type values in C.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 94,
+        "question_type": "mcq",
+        "question_text": "Which HTML tag is used to define an abbreviation or acronym?",
+        "options": {
+            "A": "&lt;abbreviation&gt;",
+            "B": "&lt;abbr&gt;",
+            "C": "&lt;acronym&gt;",
+            "D": "&lt;acr&gt;"
+        },
+        "correct_answer": "B",
+        "domain": "HTML",
+        "explanation": "The <abbr> tag defines an abbreviation or acronym in HTML.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 95,
+        "question_type": "mcq",
+        "question_text": "Which CSS selector targets an HTML element by its id?",
+        "options": {
+            "A": ".",
+            "B": "#",
+            "C": ":",
+            "D": "> "
+        },
+        "correct_answer": "B",
+        "domain": "CSS",
+        "explanation": "The # selector targets elements by their id attribute.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 96,
+        "question_type": "mcq",
+        "question_text": "What is the output of the following JavaScript code? \n```javascript\nvar name = \"Alex\" + \" \" + \"Alvin\";\ndocument.getElementById(\"demo\").innerHTML = name;\n```",
+        "options": {
+            "A": "Alex Alvin",
+            "B": "AlexAlvin",
+            "C": "TypeError",
+            "D": "ValueError"
+        },
+        "correct_answer": "A",
+        "domain": "JavaScript",
+        "explanation": "The code concatenates two strings with a space, resulting in 'Alex Alvin'.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 97,
+        "question_type": "mcq",
+        "question_text": "Which SQL command is used to modify existing records?",
+        "options": {
+            "A": "INSERT",
+            "B": "UPDATE",
+            "C": "DELETE",
+            "D": "ALTER"
+        },
+        "correct_answer": "B",
+        "domain": "SQL",
+        "explanation": "The UPDATE command modifies existing records in a table.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 98,
+        "question_type": "mcq",
+        "question_text": "What is the first step an AI agent takes when solving a problem?",
+        "options": {
+            "A": "Perceiving the environment",
+            "B": "Searching its knowledge base",
+            "C": "Seeking human input",
+            "D": "Planning actions"
+        },
+        "correct_answer": "B",
+        "domain": "Artificial Intelligence",
+        "explanation": "An AI agent first searches its knowledge base for solutions to a problem.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 99,
+        "question_type": "mcq",
+        "question_text": "Which MongoDB method retrieves a single document?",
+        "options": {
+            "A": "findOne()",
+            "B": "find()",
+            "C": "getOne()",
+            "D": "selectOne()"
+        },
+        "correct_answer": "A",
+        "domain": "MongoDB",
+        "explanation": "The findOne() method retrieves the first document that matches the query.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 100,
+        "question_type": "mcq",
+        "question_text": "Which data structure is used in a round-robin scheduling algorithm?",
+        "options": {
+            "A": "Stack",
+            "B": "Queue",
+            "C": "Array",
+            "D": "Tree"
+        },
+        "correct_answer": "B",
+        "domain": "Data Structures",
+        "explanation": "A queue is used in round-robin scheduling to cycle through tasks.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 101,
+        "question_type": "mcq",
+        "question_text": "Which data structure is used to implement a binary search tree?",
+        "options": {
+            "A": "Array",
+            "B": "Linked List",
+            "C": "Tree",
+            "D": "Queue"
+        },
+        "correct_answer": "C",
+        "domain": "Data Structures",
+        "explanation": "A binary search tree is a tree-based data structure where each node has at most two children, and the left child is less than the parent, while the right child is greater.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 102,
+        "question_type": "mcq",
+        "question_text": "What is the time complexity of the Quick Sort algorithm in its average case?",
+        "options": {
+            "A": "O(n^2)",
+            "B": "O(n log n)",
+            "C": "O(n)",
+            "D": "O(log n)"
+        },
+        "correct_answer": "B",
+        "domain": "Algorithms",
+        "explanation": "Quick Sort has an average-case time complexity of O(n log n) due to its efficient partitioning and recursive sorting.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 103,
+        "question_type": "mcq",
+        "question_text": "What is the output of the following Python code? \n```python\nx = [1, 2, 3]\ny = x[:]\ny.append(4)\nprint(x)\n```",
+        "options": {
+            "A": "[1, 2, 3, 4]",
+            "B": "[1, 2, 3]",
+            "C": "Error",
+            "D": "None"
+        },
+        "correct_answer": "B",
+        "domain": "Python",
+        "explanation": "The slice operation x[:] creates a shallow copy of the list, so modifying y does not affect x.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 104,
+        "question_type": "mcq",
+        "question_text": "Which access modifier allows a class member to be accessed only within the same package?",
+        "options": {
+            "A": "public",
+            "B": "private",
+            "C": "protected",
+            "D": "default"
+        },
+        "correct_answer": "D",
+        "domain": "Java",
+        "explanation": "The default access modifier (no keyword) restricts access to within the same package.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 105,
+        "question_type": "mcq",
+        "question_text": "What is the output of the following C code? \n```c\n#include <stdio.h>\nint main() {\n int x = 5;\n x += x++ + ++x;\n printf(\"%d\", x);\n return 0;\n}\n```",
+        "options": {
+            "A": "17",
+            "B": "16",
+            "C": "Undefined",
+            "D": "18"
+        },
+        "correct_answer": "C",
+        "domain": "C Programming",
+        "explanation": "The expression x += x++ + ++x results in undefined behavior due to multiple modifications of x without a sequence point.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 106,
+        "question_type": "mcq",
+        "question_text": "Which HTML attribute specifies an alternative text for an image?",
+        "options": {
+            "A": "src",
+            "B": "alt",
+            "C": "title",
+            "D": "href"
+        },
+        "correct_answer": "B",
+        "domain": "HTML",
+        "explanation": "The alt attribute provides alternative text for an image, used for accessibility and when the image fails to load.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 107,
+        "question_type": "mcq",
+        "question_text": "Which CSS property controls the spacing between elements?",
+        "options": {
+            "A": "padding",
+            "B": "margin",
+            "C": "border",
+            "D": "spacing"
+        },
+        "correct_answer": "B",
+        "domain": "CSS",
+        "explanation": "The margin property controls the spacing outside an element, affecting the space between elements.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 108,
+        "question_type": "mcq",
+        "question_text": "What is the output of the following JavaScript code? \n```javascript\nlet x = [1, 2, 3];\nlet y = [...x];\ny.push(4);\nconsole.log(x);\n```",
+        "options": {
+            "A": "[1, 2, 3, 4]",
+            "B": "[1, 2, 3]",
+            "C": "Error",
+            "D": "undefined"
+        },
+        "correct_answer": "B",
+        "domain": "JavaScript",
+        "explanation": "The spread operator [...x] creates a shallow copy of the array, so modifying y does not affect x.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 109,
+        "question_type": "mcq",
+        "question_text": "Which SQL keyword is used to combine rows from two or more tables?",
+        "options": {
+            "A": "JOIN",
+            "B": "UNION",
+            "C": "MERGE",
+            "D": "COMBINE"
+        },
+        "correct_answer": "A",
+        "domain": "SQL",
+        "explanation": "The JOIN keyword combines rows from two or more tables based on a related column.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 110,
+        "question_type": "mcq",
+        "question_text": "Which machine learning technique involves training on labeled data?",
+        "options": {
+            "A": "Unsupervised Learning",
+            "B": "Supervised Learning",
+            "C": "Reinforcement Learning",
+            "D": "Semi-Supervised Learning"
+        },
+        "correct_answer": "B",
+        "domain": "Artificial Intelligence",
+        "explanation": "Supervised Learning uses labeled data to train models for prediction or classification.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 111,
+        "question_type": "mcq",
+        "question_text": "Which MongoDB operator is used to match documents where a field is less than a value?",
+        "options": {
+            "A": "$gt",
+            "B": "$lt",
+            "C": "$gte",
+            "D": "$lte"
+        },
+        "correct_answer": "B",
+        "domain": "MongoDB",
+        "explanation": "The $lt operator selects documents where a field is less than a specified value.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 112,
+        "question_type": "mcq",
+        "question_text": "What is the time complexity for inserting an element in a sorted linked list?",
+        "options": {
+            "A": "O(1)",
+            "B": "O(log n)",
+            "C": "O(n)",
+            "D": "O(n^2)"
+        },
+        "correct_answer": "C",
+        "domain": "Data Structures",
+        "explanation": "Inserting into a sorted linked list requires traversing to find the correct position, which takes O(n) time.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 113,
+        "question_type": "mcq",
+        "question_text": "Which algorithm is used to find the shortest path in a weighted graph?",
+        "options": {
+            "A": "Depth-First Search",
+            "B": "Breadth-First Search",
+            "C": "Dijkstra\u2019s Algorithm",
+            "D": "Kruskal\u2019s Algorithm"
+        },
+        "correct_answer": "C",
+        "domain": "Algorithms",
+        "explanation": "Dijkstra\u2019s Algorithm finds the shortest path in a weighted graph from a source to all vertices.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 114,
+        "question_type": "mcq",
+        "question_text": "Which Python keyword is used to handle exceptions?",
+        "options": {
+            "A": "try",
+            "B": "catch",
+            "C": "throw",
+            "D": "exception"
+        },
+        "correct_answer": "A",
+        "domain": "Python",
+        "explanation": "The try keyword is used to define a block of code that will be tested for exceptions.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 115,
+        "question_type": "mcq",
+        "question_text": "Which Java interface is used to make a class serializable?",
+        "options": {
+            "A": "Serializable",
+            "B": "Cloneable",
+            "C": "Comparable",
+            "D": "Runnable"
+        },
+        "correct_answer": "A",
+        "domain": "Java",
+        "explanation": "The Serializable interface allows a class\u2019s objects to be converted into a byte stream.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 116,
+        "question_type": "mcq",
+        "question_text": "Which function is used to dynamically allocate memory in C?",
+        "options": {
+            "A": "alloc()",
+            "B": "malloc()",
+            "C": "calloc()",
+            "D": "Both B and C"
+        },
+        "correct_answer": "D",
+        "domain": "C Programming",
+        "explanation": "Both malloc() and calloc() are used to dynamically allocate memory in C.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 117,
+        "question_type": "mcq",
+        "question_text": "Which HTML tag is used to define a table row?",
+        "options": {
+            "A": "&lt;tr&gt;",
+            "B": "&lt;td&gt;",
+            "C": "&lt;table&gt;",
+            "D": "&lt;th&gt;"
+        },
+        "correct_answer": "A",
+        "domain": "HTML",
+        "explanation": "The <tr> tag defines a table row in HTML.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 118,
+        "question_type": "mcq",
+        "question_text": "Which CSS property is used to align text to the center?",
+        "options": {
+            "A": "text-align",
+            "B": "align-text",
+            "C": "center-text",
+            "D": "text-center"
+        },
+        "correct_answer": "A",
+        "domain": "CSS",
+        "explanation": "The text-align property with the value 'center' aligns text to the center.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 119,
+        "question_type": "mcq",
+        "question_text": "Which JavaScript method converts a string to an array?",
+        "options": {
+            "A": "split()",
+            "B": "join()",
+            "C": "slice()",
+            "D": "splice()"
+        },
+        "correct_answer": "A",
+        "domain": "JavaScript",
+        "explanation": "The split() method converts a string into an array based on a specified delimiter.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 120,
+        "question_type": "mcq",
+        "question_text": "Which SQL clause is used to filter grouped results?",
+        "options": {
+            "A": "WHERE",
+            "B": "HAVING",
+            "C": "GROUP BY",
+            "D": "ORDER BY"
+        },
+        "correct_answer": "B",
+        "domain": "SQL",
+        "explanation": "The HAVING clause filters grouped results, typically used with GROUP BY.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 121,
+        "question_type": "mcq",
+        "question_text": "Which type of learning involves clustering similar data points?",
+        "options": {
+            "A": "Supervised Learning",
+            "B": "Unsupervised Learning",
+            "C": "Reinforcement Learning",
+            "D": "Deep Learning"
+        },
+        "correct_answer": "B",
+        "domain": "Artificial Intelligence",
+        "explanation": "Unsupervised Learning involves clustering or grouping similar data points without labeled data.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 122,
+        "question_type": "mcq",
+        "question_text": "Which MongoDB method is used to update multiple documents?",
+        "options": {
+            "A": "updateOne()",
+            "B": "updateMany()",
+            "C": "modifyMany()",
+            "D": "setMany()"
+        },
+        "correct_answer": "B",
+        "domain": "MongoDB",
+        "explanation": "The updateMany() method updates all documents that match the specified filter.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 123,
+        "question_type": "mcq",
+        "question_text": "Which data structure is used to implement a hash map?",
+        "options": {
+            "A": "Array",
+            "B": "Linked List",
+            "C": "Hash Table",
+            "D": "Tree"
+        },
+        "correct_answer": "C",
+        "domain": "Data Structures",
+        "explanation": "A hash map is implemented using a hash table, which combines arrays and linked lists for efficient key-value storage.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 124,
+        "question_type": "mcq",
+        "question_text": "Which algorithm is used to detect cycles in a graph?",
+        "options": {
+            "A": "Dijkstra\u2019s Algorithm",
+            "B": "Prim\u2019s Algorithm",
+            "C": "Depth-First Search",
+            "D": "Kruskal\u2019s Algorithm"
+        },
+        "correct_answer": "C",
+        "domain": "Algorithms",
+        "explanation": "Depth-First Search can be used to detect cycles in a graph by tracking visited nodes.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 125,
+        "question_type": "mcq",
+        "question_text": "What is the output of the following Python code? \n```python\nx = {1: 'a', 2: 'b'}\nx[3] = 'c'\nprint(len(x))\n```",
+        "options": {
+            "A": "2",
+            "B": "3",
+            "C": "Error",
+            "D": "4"
+        },
+        "correct_answer": "B",
+        "domain": "Python",
+        "explanation": "The dictionary x is updated with a new key-value pair, increasing its length to 3.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 126,
+        "question_type": "mcq",
+        "question_text": "Which Java keyword is used to define a constant?",
+        "options": {
+            "A": "static",
+            "B": "final",
+            "C": "const",
+            "D": "volatile"
+        },
+        "correct_answer": "B",
+        "domain": "Java",
+        "explanation": "The final keyword is used to define a constant in Java, preventing value modification.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 127,
+        "question_type": "mcq",
+        "question_text": "What is the purpose of the 'static' keyword in C?",
+        "options": {
+            "A": "To allocate memory dynamically",
+            "B": "To restrict variable scope to a file",
+            "C": "To initialize variables to zero",
+            "D": "To make a variable constant"
+        },
+        "correct_answer": "B",
+        "domain": "C Programming",
+        "explanation": "The static keyword restricts a variable\u2019s scope to the file and preserves its value between function calls.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 128,
+        "question_type": "mcq",
+        "question_text": "Which HTML tag is used to embed a video?",
+        "options": {
+            "A": "&lt;video&gt;",
+            "B": "&lt;media&gt;",
+            "C": "&lt;embed&gt;",
+            "D": "&lt;movie&gt;"
+        },
+        "correct_answer": "A",
+        "domain": "HTML",
+        "explanation": "The <video> tag is used to embed video content in HTML.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 129,
+        "question_type": "mcq",
+        "question_text": "Which CSS property sets the transparency of an element?",
+        "options": {
+            "A": "opacity",
+            "B": "visibility",
+            "C": "transparent",
+            "D": "alpha"
+        },
+        "correct_answer": "A",
+        "domain": "CSS",
+        "explanation": "The opacity property sets the transparency level of an element, ranging from 0 to 1.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 130,
+        "question_type": "mcq",
+        "question_text": "Which JavaScript method removes the last element from an array?",
+        "options": {
+            "A": "pop()",
+            "B": "push()",
+            "C": "shift()",
+            "D": "unshift()"
+        },
+        "correct_answer": "A",
+        "domain": "JavaScript",
+        "explanation": "The pop() method removes and returns the last element from an array.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 131,
+        "question_type": "mcq",
+        "question_text": "Which SQL function returns the maximum value in a column?",
+        "options": {
+            "A": "MAX()",
+            "B": "TOP()",
+            "C": "HIGHEST()",
+            "D": "LARGEST()"
+        },
+        "correct_answer": "A",
+        "domain": "SQL",
+        "explanation": "The MAX() function returns the maximum value in a specified column.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 132,
+        "question_type": "mcq",
+        "question_text": "Which AI technique uses neural networks with multiple layers?",
+        "options": {
+            "A": "Machine Learning",
+            "B": "Deep Learning",
+            "C": "Reinforcement Learning",
+            "D": "Supervised Learning"
+        },
+        "correct_answer": "B",
+        "domain": "Artificial Intelligence",
+        "explanation": "Deep Learning uses neural networks with multiple layers to model complex patterns.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 133,
+        "question_type": "mcq",
+        "question_text": "Which MongoDB operator is used to match documents where a field exists?",
+        "options": {
+            "A": "$exists",
+            "B": "$present",
+            "C": "$in",
+            "D": "$notNull"
+        },
+        "correct_answer": "A",
+        "domain": "MongoDB",
+        "explanation": "The $exists operator checks if a field exists in a document.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 134,
+        "question_type": "mcq",
+        "question_text": "Which data structure allows elements to be added or removed from both ends?",
+        "options": {
+            "A": "Stack",
+            "B": "Queue",
+            "C": "Deque",
+            "D": "Array"
+        },
+        "correct_answer": "C",
+        "domain": "Data Structures",
+        "explanation": "A deque (double-ended queue) allows adding and removing elements from both ends.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 135,
+        "question_type": "mcq",
+        "question_text": "What is the time complexity of finding an element in a balanced binary search tree?",
+        "options": {
+            "A": "O(1)",
+            "B": "O(log n)",
+            "C": "O(n)",
+            "D": "O(n log n)"
+        },
+        "correct_answer": "B",
+        "domain": "Algorithms",
+        "explanation": "Searching in a balanced binary search tree takes O(log n) time due to its logarithmic height.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 136,
+        "question_type": "mcq",
+        "question_text": "Which Python method is used to remove an item from a list by value?",
+        "options": {
+            "A": "pop()",
+            "B": "remove()",
+            "C": "delete()",
+            "D": "discard()"
+        },
+        "correct_answer": "B",
+        "domain": "Python",
+        "explanation": "The remove() method removes the first occurrence of a specified value from a list.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 137,
+        "question_type": "mcq",
+        "question_text": "Which Java collection class allows duplicate elements and maintains insertion order?",
+        "options": {
+            "A": "HashSet",
+            "B": "TreeSet",
+            "C": "ArrayList",
+            "D": "HashMap"
+        },
+        "correct_answer": "C",
+        "domain": "Java",
+        "explanation": "ArrayList allows duplicates and maintains the order of insertion.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 138,
+        "question_type": "mcq",
+        "question_text": "What is the output of the following C code? \n```c\n#include <stdio.h>\nint main() {\n int a = 5, b = 3;\n printf(\"%d\", a | b);\n return 0;\n}\n```",
+        "options": {
+            "A": "7",
+            "B": "8",
+            "C": "15",
+            "D": "1"
+        },
+        "correct_answer": "A",
+        "domain": "C Programming",
+        "explanation": "The bitwise OR operator (|) between 5 (0101) and 3 (0011) results in 7 (0111).",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 139,
+        "question_type": "mcq",
+        "question_text": "Which HTML tag is used to define a form input field?",
+        "options": {
+            "A": "&lt;input&gt;",
+            "B": "&lt;form&gt;",
+            "C": "&lt;field&gt;",
+            "D": "&lt;text&gt;"
+        },
+        "correct_answer": "A",
+        "domain": "HTML",
+        "explanation": "The <input> tag defines an input field within a form.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 140,
+        "question_type": "mcq",
+        "question_text": "Which CSS property is used to create rounded corners?",
+        "options": {
+            "A": "border-radius",
+            "B": "corner-radius",
+            "C": "border-corner",
+            "D": "radius"
+        },
+        "correct_answer": "A",
+        "domain": "CSS",
+        "explanation": "The border-radius property is used to create rounded corners for an element.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 141,
+        "question_type": "mcq",
+        "question_text": "Which JavaScript keyword declares a block-scoped variable?",
+        "options": {
+            "A": "var",
+            "B": "let",
+            "C": "const",
+            "D": "Both B and C"
+        },
+        "correct_answer": "D",
+        "domain": "JavaScript",
+        "explanation": "Both let and const declare block-scoped variables, unlike var which is function-scoped.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 142,
+        "question_type": "mcq",
+        "question_text": "Which SQL join returns all rows from the left table and matching rows from the right table?",
+        "options": {
+            "A": "INNER JOIN",
+            "B": "LEFT JOIN",
+            "C": "RIGHT JOIN",
+            "D": "FULL JOIN"
+        },
+        "correct_answer": "B",
+        "domain": "SQL",
+        "explanation": "LEFT JOIN returns all rows from the left table and matching rows from the right table, with NULLs for non-matches.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 143,
+        "question_type": "mcq",
+        "question_text": "Which AI algorithm is used for playing games like chess?",
+        "options": {
+            "A": "Minimax",
+            "B": "K-Means",
+            "C": "Gradient Descent",
+            "D": "Apriori"
+        },
+        "correct_answer": "A",
+        "domain": "Artificial Intelligence",
+        "explanation": "The Minimax algorithm is used in game playing to minimize the possible loss for a worst-case scenario.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 144,
+        "question_type": "mcq",
+        "question_text": "Which MongoDB operator is used to match an array with a specific value?",
+        "options": {
+            "A": "$in",
+            "B": "$array",
+            "C": "$elemMatch",
+            "D": "$contains"
+        },
+        "correct_answer": "C",
+        "domain": "MongoDB",
+        "explanation": "The $elemMatch operator matches documents where an array field contains an element that satisfies a condition.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 145,
+        "question_type": "mcq",
+        "question_text": "What is the time complexity for accessing an element in an array?",
+        "options": {
+            "A": "O(1)",
+            "B": "O(log n)",
+            "C": "O(n)",
+            "D": "O(n^2)"
+        },
+        "correct_answer": "A",
+        "domain": "Data Structures",
+        "explanation": "Accessing an element in an array by index takes constant time, O(1).",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 146,
+        "question_type": "mcq",
+        "question_text": "Which algorithm is used for finding the minimum spanning tree of a graph?",
+        "options": {
+            "A": "Dijkstra\u2019s Algorithm",
+            "B": "Prim\u2019s Algorithm",
+            "C": "Floyd-Warshall Algorithm",
+            "D": "Kruskal\u2019s Algorithm"
+        },
+        "correct_answer": "B",
+        "domain": "Algorithms",
+        "explanation": "Prim\u2019s Algorithm finds the minimum spanning tree of a connected weighted graph.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 147,
+        "question_type": "mcq",
+        "question_text": "Which Python method is used to join elements of a list into a string?",
+        "options": {
+            "A": "join()",
+            "B": "concat()",
+            "C": "merge()",
+            "D": "combine()"
+        },
+        "correct_answer": "A",
+        "domain": "Python",
+        "explanation": "The join() method concatenates list elements into a string using a specified separator.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 148,
+        "question_type": "mcq",
+        "question_text": "Which Java keyword is used to implement multiple inheritance-like behavior?",
+        "options": {
+            "A": "extends",
+            "B": "implements",
+            "C": "super",
+            "D": "this"
+        },
+        "correct_answer": "B",
+        "domain": "Java",
+        "explanation": "The implements keyword allows a class to inherit behavior from multiple interfaces.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 149,
+        "question_type": "mcq",
+        "question_text": "What is the output of the following C code? \nc",
+        "options": {
+            "A": "10",
+            "B": "0",
+            "C": "Error",
+            "D": "Undefined"
+        },
+        "correct_answer": "B",
+        "domain": "C Programming",
+        "explanation": "The bitwise XOR operator (^) applied to a number with itself (x ^ x) results in 0, as each bit cancels out.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 150,
+        "question_type": "mcq",
+        "question_text": "Which HTML attribute is used to specify the character encoding of a document?",
+        "options": {
+            "A": "charset",
+            "B": "encoding",
+            "C": "type",
+            "D": "lang"
+        },
+        "correct_answer": "A",
+        "domain": "HTML",
+        "explanation": "The charset attribute in the <meta> tag specifies the character encoding, such as 'UTF-8'.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 151,
+        "question_type": "mcq",
+        "question_text": "Which CSS property is used to specify the font style?",
+        "options": {
+            "A": "font-style",
+            "B": "text-style",
+            "C": "font-type",
+            "D": "style"
+        },
+        "correct_answer": "A",
+        "domain": "CSS",
+        "explanation": "The font-style property specifies whether the font is normal, italic, or oblique.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 152,
+        "question_type": "mcq",
+        "question_text": "Which JavaScript method adds an element to the end of an array?",
+        "options": {
+            "A": "pop()",
+            "B": "push()",
+            "C": "shift()",
+            "D": "unshift()"
+        },
+        "correct_answer": "B",
+        "domain": "JavaScript",
+        "explanation": "The push() method adds one or more elements to the end of an array.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 153,
+        "question_type": "mcq",
+        "question_text": "Which SQL function returns the minimum value in a column?",
+        "options": {
+            "A": "MIN()",
+            "B": "LOWEST()",
+            "C": "SMALLEST()",
+            "D": "LEAST()"
+        },
+        "correct_answer": "A",
+        "domain": "SQL",
+        "explanation": "The MIN() function returns the smallest value in a specified column.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 154,
+        "question_type": "mcq",
+        "question_text": "Which AI approach learns by interacting with an environment and receiving rewards?",
+        "options": {
+            "A": "Supervised Learning",
+            "B": "Unsupervised Learning",
+            "C": "Reinforcement Learning",
+            "D": "Deep Learning"
+        },
+        "correct_answer": "C",
+        "domain": "Artificial Intelligence",
+        "explanation": "Reinforcement Learning involves an agent learning through trial and error by receiving rewards or penalties.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 155,
+        "question_type": "mcq",
+        "question_text": "Which MongoDB method is used to delete multiple documents?",
+        "options": {
+            "A": "deleteOne()",
+            "B": "deleteMany()",
+            "C": "removeMany()",
+            "D": "dropMany()"
+        },
+        "correct_answer": "B",
+        "domain": "MongoDB",
+        "explanation": "The deleteMany() method removes all documents that match the specified filter.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 156,
+        "question_type": "mcq",
+        "question_text": "What is the time complexity of deleting an element from a binary search tree?",
+        "options": {
+            "A": "O(1)",
+            "B": "O(log n)",
+            "C": "O(n)",
+            "D": "O(n^2)"
+        },
+        "correct_answer": "B",
+        "domain": "Data Structures",
+        "explanation": "In a balanced binary search tree, deletion takes O(log n) time due to the logarithmic height.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 157,
+        "question_type": "mcq",
+        "question_text": "Which algorithm is used to find all pairs shortest paths in a weighted graph?",
+        "options": {
+            "A": "Dijkstra\u2019s Algorithm",
+            "B": "Floyd-Warshall Algorithm",
+            "C": "Prim\u2019s Algorithm",
+            "D": "Kruskal\u2019s Algorithm"
+        },
+        "correct_answer": "B",
+        "domain": "Algorithms",
+        "explanation": "The Floyd-Warshall Algorithm computes the shortest paths between all pairs of vertices in a weighted graph.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 158,
+        "question_type": "mcq",
+        "question_text": "What is the output of the following Python code? \npython\nx = (1,2,3)\nx = x + (4,)\nprint(x)\n",
+        "options": {
+            "A": "(1,2,3)",
+            "B": "(1,2,3,4)",
+            "C": "Error",
+            "D": "None"
+        },
+        "correct_answer": "B",
+        "domain": "Python",
+        "explanation": "Tuples are immutable, but the + operator creates a new tuple by concatenating, resulting in (1,2,3,4).",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 159,
+        "question_type": "mcq",
+        "question_text": "Which Java keyword is used to call a parent class constructor?",
+        "options": {
+            "A": "this",
+            "B": "super",
+            "C": "extends",
+            "D": "parent"
+        },
+        "correct_answer": "B",
+        "domain": "Java",
+        "explanation": "The super keyword is used to call the constructor of the parent class.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 160,
+        "question_type": "mcq",
+        "question_text": "Which C function is used to free dynamically allocated memory?",
+        "options": {
+            "A": "free()",
+            "B": "delete()",
+            "C": "release()",
+            "D": "dealloc()"
+        },
+        "correct_answer": "A",
+        "domain": "C Programming",
+        "explanation": "The free() function is used to deallocate memory previously allocated by malloc() or calloc().",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 161,
+        "question_type": "mcq",
+        "question_text": "Which HTML tag is used to create a dropdown menu?",
+        "options": {
+            "A": "&lt;dropdown&gt;",
+            "B": "&lt;select&gt;",
+            "C": "&lt;option&gt;",
+            "D": "&lt;menu&gt;"
+        },
+        "correct_answer": "B",
+        "domain": "HTML",
+        "explanation": "The <select> tag, along with <option> tags, is used to create a dropdown menu.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 162,
+        "question_type": "mcq",
+        "question_text": "Which CSS property controls the size of an element\u2019s border?",
+        "options": {
+            "A": "border-width",
+            "B": "border-size",
+            "C": "border-length",
+            "D": "border-thickness"
+        },
+        "correct_answer": "A",
+        "domain": "CSS",
+        "explanation": "The border-width property specifies the thickness of an element\u2019s border.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 163,
+        "question_type": "mcq",
+        "question_text": "What is the output of the following JavaScript code? \njavascript\nlet x = 5;\nlet y = '5';\nconsole.log(x == y);\n",
+        "options": {
+            "A": "true",
+            "B": "false",
+            "C": "Error",
+            "D": "undefined"
+        },
+        "correct_answer": "A",
+        "domain": "JavaScript",
+        "explanation": "The == operator performs type coercion, so the string '5' is converted to a number, making 5 == 5 true.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 164,
+        "question_type": "mcq",
+        "question_text": "Which SQL join returns all rows from both tables, with NULLs where there is no match?",
+        "options": {
+            "A": "INNER JOIN",
+            "B": "LEFT JOIN",
+            "C": "RIGHT JOIN",
+            "D": "FULL JOIN"
+        },
+        "correct_answer": "D",
+        "domain": "SQL",
+        "explanation": "FULL JOIN returns all rows from both tables, with NULLs for non-matching rows.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 165,
+        "question_type": "mcq",
+        "question_text": "Which AI technique is used for natural language processing tasks like sentiment analysis?",
+        "options": {
+            "A": "K-Means Clustering",
+            "B": "Decision Trees",
+            "C": "Neural Networks",
+            "D": "Apriori Algorithm"
+        },
+        "correct_answer": "C",
+        "domain": "Artificial Intelligence",
+        "explanation": "Neural Networks, especially deep learning models, are commonly used for NLP tasks like sentiment analysis.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 166,
+        "question_type": "mcq",
+        "question_text": "Which MongoDB operator is used to perform logical OR operations in queries?",
+        "options": {
+            "A": "$and",
+            "B": "$or",
+            "C": "$not",
+            "D": "$nor"
+        },
+        "correct_answer": "B",
+        "domain": "MongoDB",
+        "explanation": "The $or operator performs a logical OR operation on an array of query expressions.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 167,
+        "question_type": "mcq",
+        "question_text": "Which data structure is best suited for implementing a dictionary?",
+        "options": {
+            "A": "Array",
+            "B": "Linked List",
+            "C": "Hash Table",
+            "D": "Stack"
+        },
+        "correct_answer": "C",
+        "domain": "Data Structures",
+        "explanation": "A hash table provides efficient key-value pair storage and retrieval, ideal for a dictionary.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 168,
+        "question_type": "mcq",
+        "question_text": "Which algorithm is used to find strongly connected components in a directed graph?",
+        "options": {
+            "A": "Dijkstra\u2019s Algorithm",
+            "B": "Kosaraju\u2019s Algorithm",
+            "C": "Prim\u2019s Algorithm",
+            "D": "Floyd-Warshall Algorithm"
+        },
+        "correct_answer": "B",
+        "domain": "Algorithms",
+        "explanation": "Kosaraju\u2019s Algorithm is used to find strongly connected components in a directed graph.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 169,
+        "question_type": "mcq",
+        "question_text": "Which Python method is used to check if a string starts with a specific substring?",
+        "options": {
+            "A": "startswith()",
+            "B": "beginswith()",
+            "C": "start()",
+            "D": "prefix()"
+        },
+        "correct_answer": "A",
+        "domain": "Python",
+        "explanation": "The startswith() method checks if a string begins with a specified substring.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 170,
+        "question_type": "mcq",
+        "question_text": "Which Java class is used to represent a resizable array?",
+        "options": {
+            "A": "ArrayList",
+            "B": "LinkedList",
+            "C": "Vector",
+            "D": "Both A and C"
+        },
+        "correct_answer": "D",
+        "domain": "Java",
+        "explanation": "Both ArrayList and Vector are resizable array implementations in Java.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 171,
+        "question_type": "mcq",
+        "question_text": "What is the output of the following C code? \n```c\n#include <stdio.h>\nint main() {\n    int x = 3;\n    printf(\"%d\", x << 2);\n    return 0;\n}\n```",
+        "options": {
+            "A": "6",
+            "B": "12",
+            "C": "9",
+            "D": "0"
+        },
+        "correct_answer": "B",
+        "domain": "C Programming",
+        "explanation": "The left shift operator (<<) shifts 3 (0011) two positions left, resulting in 12 (1100).",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 172,
+        "question_type": "mcq",
+        "question_text": "Which HTML tag is used to define a table header cell?",
+        "options": {
+            "A": "&lt;tr&gt;",
+            "B": "&lt;td&gt;",
+            "C": "&lt;th&gt;",
+            "D": "&lt;table&gt;"
+        },
+        "correct_answer": "C",
+        "domain": "HTML",
+        "explanation": "The <th> tag defines a table header cell in HTML.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 173,
+        "question_type": "mcq",
+        "question_text": "Which CSS property is used to control the visibility of an element?",
+        "options": {
+            "A": "display",
+            "B": "visibility",
+            "C": "opacity",
+            "D": "Both A and B"
+        },
+        "correct_answer": "D",
+        "domain": "CSS",
+        "explanation": "Both display and visibility properties can control an element\u2019s visibility in CSS.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 174,
+        "question_type": "mcq",
+        "question_text": "What is the output of the following JavaScript code? \njavascript\nlet x = 10;\nlet y = '10';\nconsole.log(x === y);\n",
+        "options": {
+            "A": "true",
+            "B": "false",
+            "C": "Error",
+            "D": "undefined"
+        },
+        "correct_answer": "B",
+        "domain": "JavaScript",
+        "explanation": "The === operator checks for both value and type equality. Since x is a number and y is a string, the result is false.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 175,
+        "question_type": "mcq",
+        "question_text": "Which SQL keyword is used to add a new column to an existing table?",
+        "options": {
+            "A": "ADD",
+            "B": "ALTER",
+            "C": "MODIFY",
+            "D": "UPDATE"
+        },
+        "correct_answer": "B",
+        "domain": "SQL",
+        "explanation": "The ALTER TABLE statement is used to add, modify, or drop columns in a table.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 176,
+        "question_type": "mcq",
+        "question_text": "Which AI technique is used for pattern recognition in images?",
+        "options": {
+            "A": "Convolutional Neural Networks",
+            "B": "Decision Trees",
+            "C": "K-Means Clustering",
+            "D": "Support Vector Machines"
+        },
+        "correct_answer": "A",
+        "domain": "Artificial Intelligence",
+        "explanation": "Convolutional Neural Networks are specialized for pattern recognition in image data.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 177,
+        "question_type": "mcq",
+        "question_text": "Which MongoDB operator is used to match documents where a field is not equal to a value?",
+        "options": {
+            "A": "$ne",
+            "B": "$not",
+            "C": "$neq",
+            "D": "$different"
+        },
+        "correct_answer": "A",
+        "domain": "MongoDB",
+        "explanation": "The $ne operator selects documents where a field is not equal to a specified value.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 178,
+        "question_type": "mcq",
+        "question_text": "Which data structure is used to implement a LRU (Least Recently Used) cache?",
+        "options": {
+            "A": "Stack",
+            "B": "Queue",
+            "C": "Hash Table and Doubly Linked List",
+            "D": "Binary Search Tree"
+        },
+        "correct_answer": "C",
+        "domain": "Data Structures",
+        "explanation": "An LRU cache is implemented using a hash table for O(1) lookups and a doubly linked list for O(1) updates.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 179,
+        "question_type": "mcq",
+        "question_text": "What is the time complexity of the Knapsack problem using dynamic programming?",
+        "options": {
+            "A": "O(n)",
+            "B": "O(nW)",
+            "C": "O(n^2)",
+            "D": "O(2^n)"
+        },
+        "correct_answer": "B",
+        "domain": "Algorithms",
+        "explanation": "The dynamic programming solution to the 0/1 Knapsack problem has a time complexity of O(nW), where n is the number of items and W is the capacity.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 180,
+        "question_type": "mcq",
+        "question_text": "Which Python keyword is used to exit a loop prematurely?",
+        "options": {
+            "A": "break",
+            "B": "continue",
+            "C": "exit",
+            "D": "stop"
+        },
+        "correct_answer": "A",
+        "domain": "Python",
+        "explanation": "The break keyword exits a loop immediately, terminating further iterations.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 181,
+        "question_type": "mcq",
+        "question_text": "Which Java collection class does not allow duplicate elements?",
+        "options": {
+            "A": "ArrayList",
+            "B": "LinkedList",
+            "C": "HashSet",
+            "D": "Vector"
+        },
+        "correct_answer": "C",
+        "domain": "Java",
+        "explanation": "HashSet does not allow duplicate elements, unlike ArrayList, LinkedList, or Vector.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 182,
+        "question_type": "mcq",
+        "question_text": "What is the output of the following C code? \n```c\n#include <stdio.h>\nint main() {\n    int x = 5;\n    printf(\"%d\", x & 3);\n    return 0;\n}\n```",
+        "options": {
+            "A": "1",
+            "B": "3",
+            "C": "5",
+            "D": "0"
+        },
+        "correct_answer": "A",
+        "domain": "C Programming",
+        "explanation": "The bitwise AND operator (&) between 5 (0101) and 3 (0011) results in 1 (0001).",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 183,
+        "question_type": "mcq",
+        "question_text": "Which HTML tag is used to define a paragraph?",
+        "options": {
+            "A": "&lt;p&gt;",
+            "B": "&lt;para&gt;",
+            "C": "&lt;paragraph&gt;",
+            "D": "&lt;text&gt;"
+        },
+        "correct_answer": "A",
+        "domain": "HTML",
+        "explanation": "The <p> tag defines a paragraph in HTML.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 184,
+        "question_type": "mcq",
+        "question_text": "Which CSS property is used to specify the stacking order of elements?",
+        "options": {
+            "A": "z-index",
+            "B": "stack-order",
+            "C": "layer",
+            "D": "position"
+        },
+        "correct_answer": "A",
+        "domain": "CSS",
+        "explanation": "The z-index property specifies the stacking order of elements with a position property.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 185,
+        "question_type": "mcq",
+        "question_text": "Which JavaScript method is used to merge two or more arrays?",
+        "options": {
+            "A": "concat()",
+            "B": "merge()",
+            "C": "join()",
+            "D": "combine()"
+        },
+        "correct_answer": "A",
+        "domain": "JavaScript",
+        "explanation": "The concat() method merges two or more arrays into a new array.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 186,
+        "question_type": "mcq",
+        "question_text": "Which SQL keyword is used to remove a table from a database?",
+        "options": {
+            "A": "DELETE",
+            "B": "DROP",
+            "C": "TRUNCATE",
+            "D": "REMOVE"
+        },
+        "correct_answer": "B",
+        "domain": "SQL",
+        "explanation": "The DROP TABLE statement removes a table and its data from the database.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 187,
+        "question_type": "mcq",
+        "question_text": "Which AI technique is used to reduce the dimensionality of data?",
+        "options": {
+            "A": "Principal Component Analysis",
+            "B": "Convolutional Neural Networks",
+            "C": "Reinforcement Learning",
+            "D": "Decision Trees"
+        },
+        "correct_answer": "A",
+        "domain": "Artificial Intelligence",
+        "explanation": "Principal Component Analysis (PCA) is used to reduce the dimensionality of data while preserving variance.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 188,
+        "question_type": "mcq",
+        "question_text": "Which MongoDB method is used to create an index on a collection?",
+        "options": {
+            "A": "createIndex()",
+            "B": "index()",
+            "C": "addIndex()",
+            "D": "buildIndex()"
+        },
+        "correct_answer": "A",
+        "domain": "MongoDB",
+        "explanation": "The createIndex() method is used to create an index on a MongoDB collection.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 189,
+        "question_type": "mcq",
+        "question_text": "Which data structure is used to implement a min-heap?",
+        "options": {
+            "A": "Array",
+            "B": "Linked List",
+            "C": "Stack",
+            "D": "Queue"
+        },
+        "correct_answer": "A",
+        "domain": "Data Structures",
+        "explanation": "A min-heap is typically implemented using an array for efficient access and maintenance of the heap property.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 190,
+        "question_type": "mcq",
+        "question_text": "Which algorithm is used to sort a nearly sorted array efficiently?",
+        "options": {
+            "A": "Quick Sort",
+            "B": "Merge Sort",
+            "C": "Insertion Sort",
+            "D": "Bubble Sort"
+        },
+        "correct_answer": "C",
+        "domain": "Algorithms",
+        "explanation": "Insertion Sort is efficient for nearly sorted arrays, with a best-case time complexity of O(n).",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 191,
+        "question_type": "mcq",
+        "question_text": "Which Python method is used to reverse a list in place?",
+        "options": {
+            "A": "reverse()",
+            "B": "reversed()",
+            "C": "flip()",
+            "D": "invert()"
+        },
+        "correct_answer": "A",
+        "domain": "Python",
+        "explanation": "The reverse() method reverses the elements of a list in place.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 192,
+        "question_type": "mcq",
+        "question_text": "Which Java keyword is used to prevent method overriding?",
+        "options": {
+            "A": "static",
+            "B": "final",
+            "C": "abstract",
+            "D": "protected"
+        },
+        "correct_answer": "B",
+        "domain": "Java",
+        "explanation": "The final keyword prevents a method from being overridden in a subclass.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 193,
+        "question_type": "mcq",
+        "question_text": "Which C header file is required for string manipulation functions?",
+        "options": {
+            "A": "&lt;string.h&gt;",
+            "B": "&lt;strings.h&gt;",
+            "C": "&lt;str.h&gt;",
+            "D": "&lt;stdlib.h&gt;"
+        },
+        "correct_answer": "A",
+        "domain": "C Programming",
+        "explanation": "The <string.h> header file contains functions for string manipulation, such as strlen() and strcpy().",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 194,
+        "question_type": "mcq",
+        "question_text": "Which HTML tag is used to define a navigation link section?",
+        "options": {
+            "A": "&lt;nav&gt;",
+            "B": "&lt;link&gt;",
+            "C": "&lt;menu&gt;",
+            "D": "&lt;navbar&gt;"
+        },
+        "correct_answer": "A",
+        "domain": "HTML",
+        "explanation": "The <nav> tag defines a section of navigation links in HTML.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 195,
+        "question_type": "mcq",
+        "question_text": "Which CSS property is used to set the display behavior of an element?",
+        "options": {
+            "A": "visibility",
+            "B": "display",
+            "C": "position",
+            "D": "layout"
+        },
+        "correct_answer": "B",
+        "domain": "CSS",
+        "explanation": "The display property specifies how an element is displayed, such as block, inline, or flex.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 196,
+        "question_type": "mcq",
+        "question_text": "Which JavaScript method is used to convert an array to a string?",
+        "options": {
+            "A": "join()",
+            "B": "toString()",
+            "C": "concat()",
+            "D": "Both A and B"
+        },
+        "correct_answer": "D",
+        "domain": "JavaScript",
+        "explanation": "Both join() and toString() convert an array to a string, with join() allowing a custom separator.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 197,
+        "question_type": "mcq",
+        "question_text": "Which SQL function returns the total sum of a numeric column?",
+        "options": {
+            "A": "SUM()",
+            "B": "TOTAL()",
+            "C": "ADD()",
+            "D": "COUNT()"
+        },
+        "correct_answer": "A",
+        "domain": "SQL",
+        "explanation": "The SUM() function calculates the total sum of values in a numeric column.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 198,
+        "question_type": "mcq",
+        "question_text": "Which AI technique is used for association rule mining?",
+        "options": {
+            "A": "Apriori Algorithm",
+            "B": "K-Means Clustering",
+            "C": "Decision Trees",
+            "D": "Neural Networks"
+        },
+        "correct_answer": "A",
+        "domain": "Artificial Intelligence",
+        "explanation": "The Apriori Algorithm is used for association rule mining, such as finding frequent itemsets.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 199,
+        "question_type": "mcq",
+        "question_text": "Which MongoDB operator is used to perform logical AND operations in queries?",
+        "options": {
+            "A": "$and",
+            "B": "$or",
+            "C": "$not",
+            "D": "$nor"
+        },
+        "correct_answer": "A",
+        "domain": "MongoDB",
+        "explanation": "The $and operator performs a logical AND operation on an array of query expressions.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 200,
+        "question_type": "mcq",
+        "question_text": "Which data structure is used to implement a trie?",
+        "options": {
+            "A": "Array",
+            "B": "Linked List",
+            "C": "Tree",
+            "D": "Stack"
+        },
+        "correct_answer": "C",
+        "domain": "Data Structures",
+        "explanation": "A trie is a tree-like data structure used to store strings, with nodes representing characters.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 201,
+        "question_type": "mcq",
+        "question_text": "What is the space complexity of the Merge Sort algorithm?",
+        "options": {
+            "A": "O(1)",
+            "B": "O(log n)",
+            "C": "O(n)",
+            "D": "O(n^2)"
+        },
+        "correct_answer": "C",
+        "domain": "Algorithms",
+        "explanation": "Merge Sort requires O(n) auxiliary space for the temporary arrays used during merging.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 202,
+        "question_type": "mcq",
+        "question_text": "What is the output of the following Python code? \npython\nx = [1,2,3]\nprint(x.pop(1))\n",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "Error"
+        },
+        "correct_answer": "B",
+        "domain": "Python",
+        "explanation": "The pop(1) method removes and returns the element at index 1, which is 2.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 203,
+        "question_type": "mcq",
+        "question_text": "Which Java exception is thrown when dividing by zero?",
+        "options": {
+            "A": "NullPointerException",
+            "B": "ArithmeticException",
+            "C": "IOException",
+            "D": "ClassCastException"
+        },
+        "correct_answer": "B",
+        "domain": "Java",
+        "explanation": "An ArithmeticException is thrown when an arithmetic operation, such as division by zero, is invalid.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 204,
+        "question_type": "mcq",
+        "question_text": "Which C function is used to read a string from standard input?",
+        "options": {
+            "A": "scanf()",
+            "B": "gets()",
+            "C": "fgets()",
+            "D": "Both A and C"
+        },
+        "correct_answer": "D",
+        "domain": "C Programming",
+        "explanation": "Both scanf() and fgets() can be used to read strings from standard input, with fgets() being safer.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 205,
+        "question_type": "mcq",
+        "question_text": "Which HTML attribute is used to make an input field required?",
+        "options": {
+            "A": "mandatory",
+            "B": "required",
+            "C": "must",
+            "D": "obligatory"
+        },
+        "correct_answer": "B",
+        "domain": "HTML",
+        "explanation": "The required attribute ensures that an input field must be filled before form submission.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 206,
+        "question_type": "mcq",
+        "question_text": "Which CSS property is used to specify the font weight?",
+        "options": {
+            "A": "font-weight",
+            "B": "text-weight",
+            "C": "font-bold",
+            "D": "weight"
+        },
+        "correct_answer": "A",
+        "domain": "CSS",
+        "explanation": "The font-weight property specifies the weight or boldness of the font.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 207,
+        "question_type": "mcq",
+        "question_text": "Which JavaScript method is used to remove the first element from an array?",
+        "options": {
+            "A": "pop()",
+            "B": "push()",
+            "C": "shift()",
+            "D": "unshift()"
+        },
+        "correct_answer": "C",
+        "domain": "JavaScript",
+        "explanation": "The shift() method removes and returns the first element from an array.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 208,
+        "question_type": "mcq",
+        "question_text": "Which SQL clause is used to specify conditions for aggregate functions?",
+        "options": {
+            "A": "WHERE",
+            "B": "HAVING",
+            "C": "GROUP BY",
+            "D": "ORDER BY"
+        },
+        "correct_answer": "B",
+        "domain": "SQL",
+        "explanation": "The HAVING clause is used to filter results of aggregate functions, such as COUNT or SUM.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 209,
+        "question_type": "mcq",
+        "question_text": "Which AI technique is used for predicting numerical values?",
+        "options": {
+            "A": "Classification",
+            "B": "Regression",
+            "C": "Clustering",
+            "D": "Association"
+        },
+        "correct_answer": "B",
+        "domain": "Artificial Intelligence",
+        "explanation": "Regression is used to predict numerical values in supervised learning.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 210,
+        "question_type": "mcq",
+        "question_text": "Which MongoDB method is used to drop a collection?",
+        "options": {
+            "A": "drop()",
+            "B": "delete()",
+            "C": "remove()",
+            "D": "clear()"
+        },
+        "correct_answer": "A",
+        "domain": "MongoDB",
+        "explanation": "The drop() method removes an entire collection from the database.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 211,
+        "question_type": "mcq",
+        "question_text": "Which data structure is used to implement a graph using adjacency lists?",
+        "options": {
+            "A": "Array",
+            "B": "Linked List",
+            "C": "Tree",
+            "D": "Stack"
+        },
+        "correct_answer": "B",
+        "domain": "Data Structures",
+        "explanation": "Adjacency lists use linked lists to represent the neighbors of each vertex in a graph.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 212,
+        "question_type": "mcq",
+        "question_text": "Which algorithm is used to find the longest common subsequence?",
+        "options": {
+            "A": "Greedy",
+            "B": "Dynamic Programming",
+            "C": "Divide and Conquer",
+            "D": "Backtracking"
+        },
+        "correct_answer": "B",
+        "domain": "Algorithms",
+        "explanation": "The longest common subsequence problem is solved using dynamic programming for efficiency.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 213,
+        "question_type": "mcq",
+        "question_text": "Which Python method is used to check if a key exists in a dictionary?",
+        "options": {
+            "A": "get()",
+            "B": "in",
+            "C": "exists()",
+            "D": "has_key()"
+        },
+        "correct_answer": "B",
+        "domain": "Python",
+        "explanation": "The in operator checks if a key exists in a dictionary.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 214,
+        "question_type": "mcq",
+        "question_text": "Which Java keyword is used to create an instance of a class?",
+        "options": {
+            "A": "new",
+            "B": "create",
+            "C": "instance",
+            "D": "object"
+        },
+        "correct_answer": "A",
+        "domain": "Java",
+        "explanation": "The new keyword is used to create an instance of a class in Java.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 215,
+        "question_type": "mcq",
+        "question_text": "What is the output of the following C code? \nc\n#include <stdio.h>\nint main() {\n int x = 10;\n printf(\"%d\", ~x);\n return 0;\n}\n```",
+        "options": {
+            "A": "-10",
+            "B": "-11",
+            "C": "10",
+            "D": "11"
+        },
+        "correct_answer": "B",
+        "domain": "C Programming",
+        "explanation": "The bitwise NOT operator (~) inverts all bits of 10 (00001010), resulting in -11 in two\u2019s complement.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 216,
+        "question_type": "mcq",
+        "question_text": "Which HTML tag is used to define an image?",
+        "options": {
+            "A": "&lt;img&gt;",
+            "B": "&lt;para&gt;",
+            "C": "&lt;pic&gt;",
+            "D": "&lt;photo&gt;"
+        },
+        "correct_answer": "A",
+        "domain": "HTML",
+        "explanation": "The <img> tag is used to embed an image in an HTML document.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 217,
+        "question_type": "mcq",
+        "question_text": "Which CSS property is used to set the height of an element?",
+        "options": {
+            "A": "height",
+            "B": "size",
+            "C": "length",
+            "D": "dimension"
+        },
+        "correct_answer": "A",
+        "domain": "CSS",
+        "explanation": "The height property specifies the height of an element in CSS.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 218,
+        "question_type": "mcq",
+        "question_text": "Which JavaScript method is used to add an element to the beginning of an array?",
+        "options": {
+            "A": "pop()",
+            "B": "push()",
+            "C": "shift()",
+            "D": "unshift()"
+        },
+        "correct_answer": "D",
+        "domain": "JavaScript",
+        "explanation": "The unshift() method adds one or more elements to the beginning of an array.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 219,
+        "question_type": "mcq",
+        "question_text": "Which SQL keyword is used to create a new table?",
+        "options": {
+            "A": "CREATE",
+            "B": "NEW",
+            "C": "ADD",
+            "D": "MAKE"
+        },
+        "correct_answer": "A",
+        "domain": "SQL",
+        "explanation": "The CREATE TABLE statement is used to create a new table in a database.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 220,
+        "question_type": "mcq",
+        "question_text": "Which AI technique is used for classifying data into categories?",
+        "options": {
+            "A": "Regression",
+            "B": "Clustering",
+            "C": "Classification",
+            "D": "Association"
+        },
+        "correct_answer": "C",
+        "domain": "Artificial Intelligence",
+        "explanation": "Classification is used to categorize data into predefined classes or labels.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 221,
+        "question_type": "mcq",
+        "question_text": "Which MongoDB operator is used to match documents where a field is greater than or equal to a value?",
+        "options": {
+            "A": "$gt",
+            "B": "$gte",
+            "C": "$lt",
+            "D": "$lte"
+        },
+        "correct_answer": "B",
+        "domain": "MongoDB",
+        "explanation": "The $gte operator selects documents where a field is greater than or equal to a specified value.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 222,
+        "question_type": "mcq",
+        "question_text": "Which data structure is used to implement a queue using two stacks?",
+        "options": {
+            "A": "Array",
+            "B": "Linked List",
+            "C": "Stack",
+            "D": "Tree"
+        },
+        "correct_answer": "C",
+        "domain": "Data Structures",
+        "explanation": "Two stacks can be used to simulate a queue by reversing the order of elements during dequeue operations.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 223,
+        "question_type": "mcq",
+        "question_text": "Which algorithm is used to find the shortest path in an unweighted graph?",
+        "options": {
+            "A": "Dijkstra\u2019s Algorithm",
+            "B": "Breadth-First Search",
+            "C": "Floyd-Warshall Algorithm",
+            "D": "Prim\u2019s Algorithm"
+        },
+        "correct_answer": "B",
+        "domain": "Algorithms",
+        "explanation": "Breadth-First Search finds the shortest path in an unweighted graph by exploring nodes level by level.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 224,
+        "question_type": "mcq",
+        "question_text": "Which Python keyword is used to skip the current iteration of a loop?",
+        "options": {
+            "A": "break",
+            "B": "continue",
+            "C": "pass",
+            "D": "skip"
+        },
+        "correct_answer": "B",
+        "domain": "Python",
+        "explanation": "The continue keyword skips the current iteration and proceeds to the next iteration of a loop.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 225,
+        "question_type": "mcq",
+        "question_text": "Which Java interface is used for sorting objects?",
+        "options": {
+            "A": "Serializable",
+            "B": "Comparable",
+            "C": "Cloneable",
+            "D": "Runnable"
+        },
+        "correct_answer": "B",
+        "domain": "Java",
+        "explanation": "The Comparable interface defines the compareTo() method for sorting objects.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 226,
+        "question_type": "mcq",
+        "question_text": "Which C function is used to copy a string?",
+        "options": {
+            "A": "strcpy()",
+            "B": "strdup()",
+            "C": "strcat()",
+            "D": "Both A and B"
+        },
+        "correct_answer": "D",
+        "domain": "C Programming",
+        "explanation": "Both strcpy() and strdup() are used to copy strings, with strdup() allocating new memory.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 227,
+        "question_type": "mcq",
+        "question_text": "Which HTML attribute specifies the width of an image?",
+        "options": {
+            "A": "width",
+            "B": "size",
+            "C": "height",
+            "D": "dimension"
+        },
+        "correct_answer": "A",
+        "domain": "HTML",
+        "explanation": "The width attribute specifies the width of an image in HTML.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 228,
+        "question_type": "mcq",
+        "question_text": "Which CSS property is used to specify the position of an element?",
+        "options": {
+            "A": "position",
+            "B": "placement",
+            "C": "layout",
+            "D": "location"
+        },
+        "correct_answer": "A",
+        "domain": "CSS",
+        "explanation": "The position property specifies the positioning method of an element, such as static, relative, or absolute.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 229,
+        "question_type": "mcq",
+        "question_text": "Which JavaScript method is used to find the index of an element in an array?",
+        "options": {
+            "A": "indexOf()",
+            "B": "findIndex()",
+            "C": "search()",
+            "D": "Both A and B"
+        },
+        "correct_answer": "D",
+        "domain": "JavaScript",
+        "explanation": "Both indexOf() and findIndex() are used to find the index of an element, with findIndex() supporting a callback function.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 230,
+        "question_type": "mcq",
+        "question_text": "Which SQL keyword is used to add new rows to a table?",
+        "options": {
+            "A": "INSERT",
+            "B": "ADD",
+            "C": "CREATE",
+            "D": "UPDATE"
+        },
+        "correct_answer": "A",
+        "domain": "SQL",
+        "explanation": "The INSERT INTO statement is used to add new rows to a table.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 231,
+        "question_type": "mcq",
+        "question_text": "Which AI technique is used for recommendation systems?",
+        "options": {
+            "A": "Collaborative Filtering",
+            "B": "K-Means Clustering",
+            "C": "Decision Trees",
+            "D": "Gradient Descent"
+        },
+        "correct_answer": "A",
+        "domain": "Artificial Intelligence",
+        "explanation": "Collaborative Filtering is commonly used in recommendation systems to suggest items based on user behavior.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 232,
+        "question_type": "mcq",
+        "question_text": "Which MongoDB operator is used to match documents where a field is less than or equal to a value?",
+        "options": {
+            "A": "$gt",
+            "B": "$gte",
+            "C": "$lt",
+            "D": "$lte"
+        },
+        "correct_answer": "D",
+        "domain": "MongoDB",
+        "explanation": "The $lte operator selects documents where a field is less than or equal to a specified value.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 233,
+        "question_type": "mcq",
+        "question_text": "Which data structure is used to implement a balanced binary search tree?",
+        "options": {
+            "A": "AVL Tree",
+            "B": "Stack",
+            "C": "Queue",
+            "D": "Heap"
+        },
+        "correct_answer": "A",
+        "domain": "Data Structures",
+        "explanation": "An AVL Tree is a self-balancing binary search tree that maintains O(log n) operations.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 234,
+        "question_type": "mcq",
+        "question_text": "Which algorithm is used to find the maximum flow in a network?",
+        "options": {
+            "A": "Ford-Fulkerson Algorithm",
+            "B": "Kruskal\u2019s Algorithm",
+            "C": "Prim\u2019s Algorithm",
+            "D": "Dijkstra\u2019s Algorithm"
+        },
+        "correct_answer": "A",
+        "domain": "Algorithms",
+        "explanation": "The Ford-Fulkerson Algorithm is used to compute the maximum flow in a flow network.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 235,
+        "question_type": "mcq",
+        "question_text": "Which Python method is used to convert a string to lowercase?",
+        "options": {
+            "A": "lower()",
+            "B": "toLower()",
+            "C": "downcase()",
+            "D": "lowercase()"
+        },
+        "correct_answer": "A",
+        "domain": "Python",
+        "explanation": "The lower() method converts all characters in a string to lowercase.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 236,
+        "question_type": "mcq",
+        "question_text": "Which Java keyword is used to define an abstract class?",
+        "options": {
+            "A": "abstract",
+            "B": "interface",
+            "C": "virtual",
+            "D": "extends"
+        },
+        "correct_answer": "A",
+        "domain": "Java",
+        "explanation": "The abstract keyword is used to define a class that cannot be instantiated and may contain abstract methods.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 237,
+        "question_type": "mcq",
+        "question_text": "Which C function is used to compare two strings?",
+        "options": {
+            "A": "strcmp()",
+            "B": "strncmp()",
+            "C": "strcoll()",
+            "D": "All of the above"
+        },
+        "correct_answer": "D",
+        "domain": "C Programming",
+        "explanation": "All listed functions (strcmp(), strncmp(), strcoll()) are used to compare strings, with different behaviors.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 238,
+        "question_type": "mcq",
+        "question_text": "Which HTML tag is used to define a footer for a document or section?",
+        "options": {
+            "A": "&lt;/photo&gt;&lt;/pic&gt;",
+            "B": "&lt;bottom&gt;",
+            "C": "&lt;end&gt;",
+            "D": "&lt;foot&gt;"
+        },
+        "correct_answer": "A",
+        "domain": "HTML",
+        "explanation": "The <footer> tag defines a footer for a document or section in HTML.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 239,
+        "question_type": "mcq",
+        "question_text": "Which CSS property is used to specify the width of an element?",
+        "options": {
+            "A": "width",
+            "B": "size",
+            "C": "length",
+            "D": "dimension"
+        },
+        "correct_answer": "A",
+        "domain": "CSS",
+        "explanation": "The width property specifies the width of an element in CSS.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 240,
+        "question_type": "mcq",
+        "question_text": "Which JavaScript method is used to filter elements in an array?",
+        "options": {
+            "A": "map()",
+            "B": "filter()",
+            "C": "reduce()",
+            "D": "forEach()"
+        },
+        "correct_answer": "B",
+        "domain": "JavaScript",
+        "explanation": "The filter() method creates a new array with elements that pass a test provided by a callback function.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 241,
+        "question_type": "mcq",
+        "question_text": "Which SQL keyword is used to delete specific rows from a table?",
+        "options": {
+            "A": "DELETE",
+            "B": "DROP",
+            "C": "TRUNCATE",
+            "D": "REMOVE"
+        },
+        "correct_answer": "A",
+        "domain": "SQL",
+        "explanation": "The DELETE statement is used to remove specific rows from a table based on a condition.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 242,
+        "question_type": "mcq",
+        "question_text": "Which AI technique is used for anomaly detection?",
+        "options": {
+            "A": "K-Means Clustering",
+            "B": "Decision Trees",
+            "C": "Isolation Forest",
+            "D": "Neural Networks"
+        },
+        "correct_answer": "C",
+        "domain": "Artificial Intelligence",
+        "explanation": "Isolation Forest is an AI technique specifically designed for anomaly detection.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 243,
+        "question_type": "mcq",
+        "question_text": "Which MongoDB operator is used to match documents where a field is in an array of values?",
+        "options": {
+            "A": "$in",
+            "B": "$all",
+            "C": "$contains",
+            "D": "$elemMatch"
+        },
+        "correct_answer": "A",
+        "domain": "MongoDB",
+        "explanation": "The $in operator selects documents where a field\u2019s value is in a specified array.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 244,
+        "question_type": "mcq",
+        "question_text": "Which data structure is used to implement a stack using two queues?",
+        "options": {
+            "A": "Array",
+            "B": "Linked List",
+            "C": "Queue",
+            "D": "Tree"
+        },
+        "correct_answer": "C",
+        "domain": "Data Structures",
+        "explanation": "Two queues can be used to simulate a stack by rearranging elements during push operations.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 245,
+        "question_type": "mcq",
+        "question_text": "What is the time complexity of the Selection Sort algorithm?",
+        "options": {
+            "A": "O(n)",
+            "B": "O(n log n)",
+            "C": "O(n^2)",
+            "D": "O(log n)"
+        },
+        "correct_answer": "C",
+        "domain": "Algorithms",
+        "explanation": "Selection Sort has a time complexity of O(n^2) as it repeatedly finds the minimum element and places it in the sorted portion.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 246,
+        "question_type": "mcq",
+        "question_text": "Which Python method is used to convert a string to uppercase?",
+        "options": {
+            "A": "upper()",
+            "B": "toUpper()",
+            "C": "upcase()",
+            "D": "uppercase()"
+        },
+        "correct_answer": "A",
+        "domain": "Python",
+        "explanation": "The upper() method converts all characters in a string to uppercase.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 247,
+        "question_type": "mcq",
+        "question_text": "Which Java class is used to handle date and time?",
+        "options": {
+            "A": "Date",
+            "B": "Calendar",
+            "C": "LocalDate",
+            "D": "All of the above"
+        },
+        "correct_answer": "D",
+        "domain": "Java",
+        "explanation": "Date, Calendar, and LocalDate (from java.time) are all used to handle date and time in Java.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 248,
+        "question_type": "mcq",
+        "question_text": "Which C function is used to find the length of a string?",
+        "options": {
+            "A": "strlen()",
+            "B": "length()",
+            "C": "size()",
+            "D": "strsize()"
+        },
+        "correct_answer": "A",
+        "domain": "C Programming",
+        "explanation": "The strlen() function returns the length of a null-terminated string.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 249,
+        "question_type": "mcq",
+        "question_text": "Which HTML tag is used to define a section in a document?",
+        "options": {
+            "A": "&lt;section&gt;",
+            "B": "&lt;div&gt;",
+            "C": "&lt;article&gt;",
+            "D": "All of the above"
+        },
+        "correct_answer": "D",
+        "domain": "HTML",
+        "explanation": "<section>, <div>, and <article> can all be used to define sections in a document, with different semantic meanings.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 250,
+        "question_type": "mcq",
+        "question_text": "Which CSS property is used to set the background image of an element?",
+        "options": {
+            "A": "background-image",
+            "B": "image",
+            "C": "bg-image",
+            "D": "background"
+        },
+        "correct_answer": "A",
+        "domain": "CSS",
+        "explanation": "The background-image property specifies an image to use as the background of an element.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 251,
+        "question_type": "mcq",
+        "question_text": "Which JavaScript method is used to iterate over an array and apply a function to each element?",
+        "options": {
+            "A": "map()",
+            "B": "forEach()",
+            "C": "filter()",
+            "D": "reduce()"
+        },
+        "correct_answer": "B",
+        "domain": "JavaScript",
+        "explanation": "The forEach() method executes a provided function once for each array element.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 252,
+        "question_type": "mcq",
+        "question_text": "Which SQL function returns the number of distinct values in a column?",
+        "options": {
+            "A": "COUNT()",
+            "B": "DISTINCT()",
+            "C": "UNIQUE()",
+            "D": "COUNT(DISTINCT)"
+        },
+        "correct_answer": "D",
+        "domain": "SQL",
+        "explanation": "The COUNT(DISTINCT column) function returns the number of unique values in a column.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 253,
+        "question_type": "mcq",
+        "question_text": "Which AI technique is used for optimizing neural network weights?",
+        "options": {
+            "A": "Gradient Descent",
+            "B": "K-Means Clustering",
+            "C": "Apriori Algorithm",
+            "D": "Decision Trees"
+        },
+        "correct_answer": "A",
+        "domain": "Artificial Intelligence",
+        "explanation": "Gradient Descent is used to optimize neural network weights by minimizing the loss function.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 254,
+        "question_type": "mcq",
+        "question_text": "Which MongoDB method is used to sort query results?",
+        "options": {
+            "A": "sort()",
+            "B": "order()",
+            "C": "arrange()",
+            "D": "sortBy()"
+        },
+        "correct_answer": "A",
+        "domain": "MongoDB",
+        "explanation": "The sort() method is used to sort query results in MongoDB, specifying ascending (1) or descending (-1) order.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 255,
+        "question_type": "mcq",
+        "question_text": "Which data structure is used to implement a Red-Black Tree?",
+        "options": {
+            "A": "Array",
+            "B": "Linked List",
+            "C": "Tree",
+            "D": "Stack"
+        },
+        "correct_answer": "C",
+        "domain": "Data Structures",
+        "explanation": "A Red-Black Tree is a self-balancing binary search tree with color properties to ensure balance.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 256,
+        "question_type": "mcq",
+        "question_text": "Which algorithm is used to find the shortest path in a graph with negative weights?",
+        "options": {
+            "A": "Dijkstra\u2019s Algorithm",
+            "B": "Bellman-Ford Algorithm",
+            "C": "Prim\u2019s Algorithm",
+            "D": "Kruskal\u2019s Algorithm"
+        },
+        "correct_answer": "B",
+        "domain": "Algorithms",
+        "explanation": "The Bellman-Ford Algorithm handles graphs with negative weights to find the shortest paths.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 257,
+        "question_type": "mcq",
+        "question_text": "Which Python method is used to split a string into a list based on a delimiter?",
+        "options": {
+            "A": "split()",
+            "B": "divide()",
+            "C": "break()",
+            "D": "slice()"
+        },
+        "correct_answer": "A",
+        "domain": "Python",
+        "explanation": "The split() method splits a string into a list based on a specified delimiter.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 258,
+        "question_type": "mcq",
+        "question_text": "Which Java keyword is used to handle multiple exceptions in a single catch block?",
+        "options": {
+            "A": "multi",
+            "B": "|",
+            "C": "catch",
+            "D": "throws"
+        },
+        "correct_answer": "B",
+        "domain": "Java",
+        "explanation": "The | operator is used in a catch block to handle multiple exceptions (e.g., catch(Exception1 | Exception2 e)).",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 259,
+        "question_type": "mcq",
+        "question_text": "Which C function is used to concatenate two strings?",
+        "options": {
+            "A": "strcat()",
+            "B": "strncat()",
+            "C": "strjoin()",
+            "D": "Both A and B"
+        },
+        "correct_answer": "D",
+        "domain": "C Programming",
+        "explanation": "Both strcat() and strncat() concatenate strings, with strncat() allowing a specified number of characters.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 260,
+        "question_type": "mcq",
+        "question_text": "Which HTML tag is used to define an article?",
+        "options": {
+            "A": "&lt;article&gt;",
+            "B": "&lt;section&gt;",
+            "C": "&lt;div&gt;",
+            "D": "&lt;content&gt;"
+        },
+        "correct_answer": "A",
+        "domain": "HTML",
+        "explanation": "The <article> tag defines independent, self-contained content in HTML.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 261,
+        "question_type": "mcq",
+        "question_text": "Which CSS property is used to set the text alignment to the right?",
+        "options": {
+            "A": "text-align: right",
+            "B": "align: right",
+            "C": "text-right: align",
+            "D": "align-text: right"
+        },
+        "correct_answer": "A",
+        "domain": "CSS",
+        "explanation": "The text-align property with the value 'right' aligns text to the right.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 262,
+        "question_type": "mcq",
+        "question_text": "Which JavaScript method is used to reduce an array to a single value?",
+        "options": {
+            "A": "map()",
+            "B": "filter()",
+            "C": "reduce()",
+            "D": "forEach()"
+        },
+        "correct_answer": "C",
+        "domain": "JavaScript",
+        "explanation": "The reduce() method applies a function to reduce an array to a single value.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 263,
+        "question_type": "mcq",
+        "question_text": "Which SQL keyword is used to create a unique constraint on a column?",
+        "options": {
+            "A": "UNIQUE",
+            "B": "PRIMARY KEY",
+            "C": "NOT NULL",
+            "D": "CHECK"
+        },
+        "correct_answer": "A",
+        "domain": "SQL",
+        "explanation": "The UNIQUE constraint ensures that all values in a column are distinct.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 264,
+        "question_type": "mcq",
+        "question_text": "Which AI technique is used for time-series forecasting?",
+        "options": {
+            "A": "Recurrent Neural Networks",
+            "B": "K-Means Clustering",
+            "C": "Decision Trees",
+            "D": "Apriori Algorithm"
+        },
+        "correct_answer": "A",
+        "domain": "Artificial Intelligence",
+        "explanation": "Recurrent Neural Networks (RNNs) are used for time-series forecasting due to their ability to handle sequential data.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 265,
+        "question_type": "mcq",
+        "question_text": "Which MongoDB method is used to limit the number of documents returned in a query?",
+        "options": {
+            "A": "limit()",
+            "B": "restrict()",
+            "C": "cap()",
+            "D": "bound()"
+        },
+        "correct_answer": "A",
+        "domain": "MongoDB",
+        "explanation": "The limit() method specifies the maximum number of documents to return in a query.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 266,
+        "question_type": "mcq",
+        "question_text": "Which data structure is used to implement a priority queue using a binary heap?",
+        "options": {
+            "A": "Array",
+            "B": "Linked List",
+            "C": "Tree",
+            "D": "Stack"
+        },
+        "correct_answer": "A",
+        "domain": "Data Structures",
+        "explanation": "A binary heap, used for a priority queue, is typically implemented using an array for efficiency.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 267,
+        "question_type": "mcq",
+        "question_text": "Which algorithm is used to find the topological sort of a directed acyclic graph?",
+        "options": {
+            "A": "Dijkstra\u2019s Algorithm",
+            "B": "Kahn\u2019s Algorithm",
+            "C": "Prim\u2019s Algorithm",
+            "D": "Floyd-Warshall Algorithm"
+        },
+        "correct_answer": "B",
+        "domain": "Algorithms",
+        "explanation": "Kahn\u2019s Algorithm is used to perform a topological sort on a directed acyclic graph.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 268,
+        "question_type": "mcq",
+        "question_text": "Which Python method is used to check if a string is a valid identifier?",
+        "options": {
+            "A": "isidentifier()",
+            "B": "isvalid()",
+            "C": "checkid()",
+            "D": "identifier()"
+        },
+        "correct_answer": "A",
+        "domain": "Python",
+        "explanation": "The isidentifier() method checks if a string is a valid Python identifier.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 269,
+        "question_type": "mcq",
+        "question_text": "Which Java keyword is used to define a method that does not return a value?",
+        "options": {
+            "A": "void",
+            "B": "null",
+            "C": "none",
+            "D": "empty"
+        },
+        "correct_answer": "A",
+        "domain": "Java",
+        "explanation": "The void keyword indicates that a method does not return a value.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 270,
+        "question_type": "mcq",
+        "question_text": "Which C function is used to read a single character from standard input?",
+        "options": {
+            "A": "getchar()",
+            "B": "scanf()",
+            "C": "fgets()",
+            "D": "read()"
+        },
+        "correct_answer": "A",
+        "domain": "C Programming",
+        "explanation": "The getchar() function reads a single character from standard input.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 271,
+        "question_type": "mcq",
+        "question_text": "Which HTML tag is used to define a header for a document or section?",
+        "options": {
+            "A": "&lt;header&gt;",
+            "B": "",
+            "C": "&lt;h1&gt;",
+            "D": "&lt;top&gt;"
+        },
+        "correct_answer": "A",
+        "domain": "HTML",
+        "explanation": "The <header> tag defines a header for a document or section, typically containing introductory content.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 272,
+        "question_type": "mcq",
+        "question_text": "Which CSS property is used to set the spacing between lines of text?",
+        "options": {
+            "A": "line-height",
+            "B": "text-spacing",
+            "C": "line-spacing",
+            "D": "spacing"
+        },
+        "correct_answer": "A",
+        "domain": "CSS",
+        "explanation": "The line-height property sets the spacing between lines of text in CSS.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 273,
+        "question_type": "mcq",
+        "question_text": "Which JavaScript method is used to check if an array includes a specific element?",
+        "options": {
+            "A": "includes()",
+            "B": "contains()",
+            "C": "has()",
+            "D": "exists()"
+        },
+        "correct_answer": "A",
+        "domain": "JavaScript",
+        "explanation": "The includes() method checks if an array contains a specified element, returning true or false.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 274,
+        "question_type": "mcq",
+        "question_text": "Which SQL keyword is used to define a primary key constraint?",
+        "options": {
+            "A": "PRIMARY KEY",
+            "B": "UNIQUE",
+            "C": "KEY",
+            "D": "INDEX"
+        },
+        "correct_answer": "A",
+        "domain": "SQL",
+        "explanation": "The PRIMARY KEY constraint uniquely identifies each record in a table.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 275,
+        "question_type": "mcq",
+        "question_text": "Which AI technique is used for feature extraction in images?",
+        "options": {
+            "A": "Convolutional Neural Networks",
+            "B": "K-Means Clustering",
+            "C": "Decision Trees",
+            "D": "Support Vector Machines"
+        },
+        "correct_answer": "A",
+        "domain": "Artificial Intelligence",
+        "explanation": "Convolutional Neural Networks are used for feature extraction in images through convolutional layers.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 276,
+        "question_type": "mcq",
+        "question_text": "Which MongoDB operator is used to match documents where a field matches a regular expression?",
+        "options": {
+            "A": "$regex",
+            "B": "$match",
+            "C": "$pattern",
+            "D": "$like"
+        },
+        "correct_answer": "A",
+        "domain": "MongoDB",
+        "explanation": "The $regex operator is used to match documents where a field matches a regular expression.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 277,
+        "question_type": "mcq",
+        "question_text": "Which data structure is used to implement a B-Tree?",
+        "options": {
+            "A": "Array",
+            "B": "Linked List",
+            "C": "Tree",
+            "D": "Stack"
+        },
+        "correct_answer": "C",
+        "domain": "Data Structures",
+        "explanation": "A B-Tree is a self-balancing tree data structure used for efficient storage and retrieval.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 278,
+        "question_type": "mcq",
+        "question_text": "Which algorithm is used to find the minimum cut in a flow network?",
+        "options": {
+            "A": "Ford-Fulkerson Algorithm",
+            "B": "Dijkstra\u2019s Algorithm",
+            "C": "Prim\u2019s Algorithm",
+            "D": "Kruskal\u2019s Algorithm"
+        },
+        "correct_answer": "A",
+        "domain": "Algorithms",
+        "explanation": "The Ford-Fulkerson Algorithm can be used to find the minimum cut in a flow network.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 279,
+        "question_type": "mcq",
+        "question_text": "Which Python method is used to remove all items from a list?",
+        "options": {
+            "A": "clear()",
+            "B": "remove()",
+            "C": "delete()",
+            "D": "empty()"
+        },
+        "correct_answer": "A",
+        "domain": "Python",
+        "explanation": "The clear() method removes all items from a list.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 280,
+        "question_type": "mcq",
+        "question_text": "Which Java keyword is used to define a class that inherits from another class?",
+        "options": {
+            "A": "extends",
+            "B": "implements",
+            "C": "super",
+            "D": "this"
+        },
+        "correct_answer": "A",
+        "domain": "Java",
+        "explanation": "The extends keyword is used to define a class that inherits from another class.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 281,
+        "question_type": "mcq",
+        "question_text": "Which C function is used to write a character to standard output?",
+        "options": {
+            "A": "putchar()",
+            "B": "printf()",
+            "C": "puts()",
+            "D": "write()"
+        },
+        "correct_answer": "A",
+        "domain": "C Programming",
+        "explanation": "The putchar() function writes a single character to standard output.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 282,
+        "question_type": "mcq",
+        "question_text": "Which HTML tag is used to define a list item?",
+        "options": {
+            "A": "&lt;li&gt;",
+            "B": "&lt;ul&gt;",
+            "C": "&lt;ol&gt;",
+            "D": "&lt;item&gt;"
+        },
+        "correct_answer": "A",
+        "domain": "HTML",
+        "explanation": "The <li> tag defines a list item within an ordered or unordered list.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 283,
+        "question_type": "mcq",
+        "question_text": "Which CSS property is used to set the border style of an element?",
+        "options": {
+            "A": "border-style",
+            "B": "border-type",
+            "C": "border-line",
+            "D": "border"
+        },
+        "correct_answer": "A",
+        "domain": "CSS",
+        "explanation": "The border-style property specifies the style of an element\u2019s border, such as solid or dashed.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 284,
+        "question_type": "mcq",
+        "question_text": "Which JavaScript method is used to create a new array with the results of calling a function for every array element?",
+        "options": {
+            "A": "map()",
+            "B": "filter()",
+            "C": "reduce()",
+            "D": "forEach()"
+        },
+        "correct_answer": "A",
+        "domain": "JavaScript",
+        "explanation": "The map() method creates a new array with the results of calling a function for each element.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 285,
+        "question_type": "mcq",
+        "question_text": "Which SQL keyword is used to combine the results of two or more SELECT statements?",
+        "options": {
+            "A": "JOIN",
+            "B": "UNION",
+            "C": "MERGE",
+            "D": "COMBINE"
+        },
+        "correct_answer": "B",
+        "domain": "SQL",
+        "explanation": "The UNION operator combines the results of two or more SELECT statements, removing duplicates.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 286,
+        "question_type": "mcq",
+        "question_text": "Which AI technique is used for grouping similar objects without prior labels?",
+        "options": {
+            "A": "Classification",
+            "B": "Regression",
+            "C": "Clustering",
+            "D": "Reinforcement Learning"
+        },
+        "correct_answer": "C",
+        "domain": "Artificial Intelligence",
+        "explanation": "Clustering groups similar objects without prior labels, using unsupervised learning.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 287,
+        "question_type": "mcq",
+        "question_text": "Which MongoDB method is used to skip a specified number of documents in a query?",
+        "options": {
+            "A": "skip()",
+            "B": "offset()",
+            "C": "jump()",
+            "D": "bypass()"
+        },
+        "correct_answer": "A",
+        "domain": "MongoDB",
+        "explanation": "The skip() method skips a specified number of documents in a MongoDB query.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 288,
+        "question_type": "mcq",
+        "question_text": "Which data structure is used to implement a hash set?",
+        "options": {
+            "A": "Array",
+            "B": "Linked List",
+            "C": "Hash Table",
+            "D": "Tree"
+        },
+        "correct_answer": "C",
+        "domain": "Data Structures",
+        "explanation": "A hash set is implemented using a hash table for efficient storage and lookup of unique elements.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 289,
+        "question_type": "mcq",
+        "question_text": "Which algorithm is used to find the shortest path in a graph with non-negative weights?",
+        "options": {
+            "A": "Bellman-Ford Algorithm",
+            "B": "Dijkstra\u2019s Algorithm",
+            "C": "Floyd-Warshall Algorithm",
+            "D": "Kruskal\u2019s Algorithm"
+        },
+        "correct_answer": "B",
+        "domain": "Algorithms",
+        "explanation": "Dijkstra\u2019s Algorithm finds the shortest path in a graph with non-negative weights efficiently.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 290,
+        "question_type": "mcq",
+        "question_text": "Which Python method is used to check if a string is numeric?",
+        "options": {
+            "A": "isnumeric()",
+            "B": "isdigit()",
+            "C": "isnumber()",
+            "D": "Both A and B"
+        },
+        "correct_answer": "D",
+        "domain": "Python",
+        "explanation": "Both isnumeric() and isdigit() check if a string contains only numeric characters, with slight differences.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 291,
+        "question_type": "mcq",
+        "question_text": "Which Java keyword is used to throw an exception explicitly?",
+        "options": {
+            "A": "throw",
+            "B": "throws",
+            "C": "try",
+            "D": "catch"
+        },
+        "correct_answer": "A",
+        "domain": "Java",
+        "explanation": "The throw keyword is used to explicitly throw an exception in Java.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 292,
+        "question_type": "mcq",
+        "question_text": "Which C function is used to convert a string to an integer?",
+        "options": {
+            "A": "atoi()",
+            "B": "strtol()",
+            "C": "atof()",
+            "D": "Both A and B"
+        },
+        "correct_answer": "D",
+        "domain": "C Programming",
+        "explanation": "Both atoi() and strtol() convert strings to integers, with strtol() offering more control.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 293,
+        "question_type": "mcq",
+        "question_text": "Which HTML tag is used to define an inline frame?",
+        "options": {
+            "A": "&#x3C;iframe>",
+            "B": "",
+            "C": "&lt;embed&gt;",
+            "D": "&lt;object&gt;"
+        },
+        "correct_answer": "A",
+        "domain": "HTML",
+        "explanation": "The &#x3C;iframe> tag defines an inline frame for embedding another document within the current HTML document.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 294,
+        "question_type": "mcq",
+        "question_text": "Which CSS property is used to set the text decoration, such as underline?",
+        "options": {
+            "A": "text-decoration",
+            "B": "decoration",
+            "C": "text-style",
+            "D": "style"
+        },
+        "correct_answer": "A",
+        "domain": "CSS",
+        "explanation": "The text-decoration property specifies decorations like underline, overline, or line-through.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 295,
+        "question_type": "mcq",
+        "question_text": "Which JavaScript method is used to check if a value is NaN?",
+        "options": {
+            "A": "isNaN()",
+            "B": "checkNaN()",
+            "C": "isNumber()",
+            "D": "notNumber()"
+        },
+        "correct_answer": "A",
+        "domain": "JavaScript",
+        "explanation": "The isNaN() function checks if a value is NaN (Not-a-Number).",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 296,
+        "question_type": "mcq",
+        "question_text": "Which SQL keyword is used to define a foreign key constraint?",
+        "options": {
+            "A": "FOREIGN KEY",
+            "B": "REFERENCE",
+            "C": "LINK",
+            "D": "CONNECT"
+        },
+        "correct_answer": "A",
+        "domain": "SQL",
+        "explanation": "The FOREIGN KEY constraint establishes a link between two tables based on a column.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 297,
+        "question_type": "mcq",
+        "question_text": "Which AI technique is used for speech recognition?",
+        "options": {
+            "A": "Hidden Markov Models",
+            "B": "K-Means Clustering",
+            "C": "Decision Trees",
+            "D": "Apriori Algorithm"
+        },
+        "correct_answer": "A",
+        "domain": "Artificial Intelligence",
+        "explanation": "Hidden Markov Models are commonly used in speech recognition for modeling sequential data.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 298,
+        "question_type": "mcq",
+        "question_text": "Which MongoDB method is used to count the number of documents in a collection?",
+        "options": {
+            "A": "count()",
+            "B": "countDocuments()",
+            "C": "size()",
+            "D": "length()"
+        },
+        "correct_answer": "B",
+        "domain": "MongoDB",
+        "explanation": "The countDocuments() method returns the number of documents that match a query in a collection.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 299,
+        "question_type": "mcq",
+        "question_text": "Which data structure is used to implement a disjoint-set (union-find)?",
+        "options": {
+            "A": "Array",
+            "B": "Linked List",
+            "C": "Tree",
+            "D": "Stack"
+        },
+        "correct_answer": "C",
+        "domain": "Data Structures",
+        "explanation": "A disjoint-set data structure is typically implemented using a tree for efficient union and find operations.",
+        "difficulty": "Intermediate"
+    },
+    {
+        "id": 300,
+        "question_type": "mcq",
+        "question_text": "Which algorithm is used to find the convex hull of a set of points?",
+        "options": {
+            "A": "Graham\u2019s Scan",
+            "B": "Dijkstra\u2019s Algorithm",
+            "C": "Kruskal\u2019s Algorithm",
+            "D": "Floyd-Warshall Algorithm"
+        },
+        "correct_answer": "A",
+        "domain": "Algorithms",
+        "explanation": "Graham\u2019s Scan is an algorithm used to find the convex hull of a set of points in O(n log n) time by sorting points by polar angle and traversing them to construct the hull. Dijkstra\u2019s Algorithm, Kruskal\u2019s Algorithm, and Floyd-Warshall Algorithm are used for shortest paths, minimum spanning trees, and all-pairs shortest paths, respectively, and are not applicable to convex hull problems.",
+        "difficulty": "Intermediate"
+    }
+]

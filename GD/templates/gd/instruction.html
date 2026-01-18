@@ -1,0 +1,15 @@
+    {% extends 'dashboard/base_dashboard.html' %}
+    {% block title %}GD Instructions | InteleView AI{% endblock %}
+    {% block page_content %}
+    <div class="gd-instruction">
+        <h2>📋 Group Discussion Instructions</h2>
+        <ul>
+            <li>You will get 3 random topics.</li>
+            <li>Each topic has a 3-minute timer with audio recording.</li>
+            <li>Click "Start GD" to begin. Ensure your microphone and webcam are enabled.</li>
+            <li>Your speech will be transcribed and analyzed by AI.</li>
+            <li>Feedback and suggestions will be provided after all topics.</li>
+        </ul>
+        <a href="{% url 'GD:gd_session' %}" class="btn btn-success mt-4">🎙️ Start GD</a>
+    </div>
+    {% endblock %}

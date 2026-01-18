@@ -1,0 +1,56 @@
+{% extends 'dashboard/base_dashboard.html' %}
+{% load static %}
+
+{% block title %}Group Discussion | InteleView AI{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/gd.css' %}">
+
+<div class="container mt-5 p-4 rounded bg-light shadow">
+    <h2 class="text-center mb-4 text-primary">AI Mock Group Discussion</h2>
+
+    <!-- Instructions -->
+    <div id="instructions" class="mb-4">
+        <h4>Instructions:</h4>
+        <ul>
+            <li>This is a 3-minute AI-evaluated group discussion session.</li>
+            <li>You will be given 3 random topics. Pick one and click <strong>Dictate</strong>.</li>
+            <li>Mic and Camera must be enabled. AI will auto start when everything is ready.</li>
+            <li>You must speak for 3 minutes. Your voice will be transcribed live and evaluated.</li>
+        </ul>
+    </div>
+
+    <!-- Start GD Button -->
+    <div class="text-center mb-4">
+        <button id="startGD" class="btn btn-success">Start Group Discussion</button>
+    </div>
+
+    <!-- Topic Display -->
+    <div id="gdTopics" class="mb-4 d-none">
+        <h5 class="text-secondary">🧠 Your AI-generated Topics:</h5>
+        <ul id="topicList"></ul>
+    </div>
+
+    <!-- Dictate + Timer + Transcript -->
+    <div id="gdSection" class="d-none">
+        <h5 class="text-dark">🎙️ Speak Now – Timer: <span id="timer">03:00</span></h5>
+        <button id="dictateBtn" class="btn btn-danger mb-3">Start Dictation</button>
+
+        <!-- Live Transcript -->
+        <div class="card">
+            <div class="card-header bg-primary text-white">Live Transcription</div>
+            <div class="card-body">
+                <p id="liveTranscript" class="text-dark"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feedback -->
+    <div id="feedbackSection" class="d-none mt-4">
+        <h4 class="text-success">✅ AI Feedback</h4>
+        <div id="aiFeedback" class="bg-white p-3 border rounded shadow-sm"></div>
+    </div>
+</div>
+
+<script src="{% static 'gd/gd.js' %}"></script>
+{% endblock %}

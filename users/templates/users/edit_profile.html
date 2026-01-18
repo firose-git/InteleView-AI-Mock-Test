@@ -1,0 +1,90 @@
+{% extends 'dashboard/base_dashboard.html' %}
+{% block title %}Edit Profile{% endblock %}
+
+{% block content %}
+<style>
+  .edit-profile-container {
+    max-width: 700px;
+    margin: auto;
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    animation: fadeInUp 0.5s ease;
+  }
+
+  .edit-profile-container h3 {
+    font-weight: 700;
+    font-size: 1.75rem;
+    margin-bottom: 1.8rem;
+    color: #2c3e50;
+  }
+
+  label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 0.4rem;
+  }
+
+  .form-control {
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ced4da;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+  }
+
+  .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+  }
+
+  .btn-save {
+    margin-top: 1.5rem;
+    padding: 0.6rem 1.3rem;
+    background: linear-gradient(135deg, #28a745, #218838);
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .btn-save:hover {
+    background: linear-gradient(135deg, #218838, #1e7e34);
+    transform: translateY(-2px);
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<div class="edit-profile-container">
+  <a href="javascript:history.back()" class="btn btn-outline-secondary mb-4" style="position: absolute; top: 30px; left: 30px; z-index: 10;">
+    <i class="fas fa-arrow-left me-2"></i> Back
+  </a>
+  
+  <h3>📝 Edit Profile</h3>
+
+  <form method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="first_name">First Name</label>
+      <input type="text" id="first_name" name="first_name" value="{{ user.first_name }}" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="last_name">Last Name</label>
+      <input type="text" id="last_name" name="last_name" value="{{ user.last_name }}" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-save">💾 Save Changes</button>
+  </form>
+</div>
+{% endblock %}

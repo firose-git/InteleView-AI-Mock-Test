@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Email Verification</title>
+  <link rel="stylesheet" href="{% static 'users/css/otp.css' %}">
+</head>
+<body>
+  <div class="otp-container">
+    <h2>Email Verification</h2>
+    <p>Enter the OTP sent to <b>{{ email }}</b></p>
+    <p><small>This OTP is valid for only <strong>10 minutes</strong>.</small></p>
+
+    <!-- ✅ Display Django messages here -->
+    {% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}">
+      {{ message }}
+    </div>
+  {% endfor %}
+{% endif %}
+
+
+    <!-- OTP verification form -->
+    <form method="POST">
+      {% csrf_token %}
+      <input type="text" name="otp" maxlength="6" required placeholder="Enter OTP" />
+      <button type="submit">Verify</button>
+    </form>
+
+    <!-- Resend OTP form -->
+    <form method="GET" action="{% url 'users:resend_otp' email=email %}" style="margin-top: 10px;">
+      <button type="submit" class="resend-btn">Resend OTP</button>
+    </form>
+  </div>
+</body>
+</html>

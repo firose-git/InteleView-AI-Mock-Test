@@ -1,0 +1,378 @@
+{% extends 'dashboard/base_dashboard.html' %}
+{% block title %}Settings | InteleView AI{% endblock %}
+
+{% block content %}
+<style>
+  /* Back button fixed top-left */
+  /* Fix Back Button */
+.back-button {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  z-index: 999;
+  padding: 0.6rem 1.2rem;
+  background-color: #fff;
+  border: 2px solid #6c757d;
+  color: #343a40;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+}
+
+.back-button:hover {
+  background-color: #f8f9fa;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* Center Jump To Section */
+.jump-section-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+/* Buttons inside the Jump to Section */
+.jump-section-wrapper .btn {
+  border-radius: 50px;
+  padding: 0.4rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  [id] {
+    scroll-margin-top: 80px;
+  }
+
+  /* Section Heading Styles */
+  .container h3, .container h4 {
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    color: #2c3e50;
+    border-left: 5px solid #6c63ff;
+    padding-left: 12px;
+  }
+
+  /* Form Containers */
+  .container form {
+    background: #fdfdfd;
+    padding: 1.8rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+    margin-bottom: 3rem;
+  }
+
+  /* Form Labels */
+  .form-label {
+    font-weight: 600;
+    color: #495057;
+  }
+
+  /* Inputs */
+  .form-control {
+    border-radius: 10px;
+    padding: 0.6rem 1rem;
+    border: 1px solid #ced4da;
+    transition: border-color 0.2s ease-in-out;
+  }
+
+  .form-control:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 0 0.1rem rgba(108, 99, 255, 0.25);
+  }
+
+  /* Form Buttons */
+  .btn {
+    border-radius: 10px;
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #6c63ff, #845ef7);
+    border: none;
+    color: #fff;
+  }
+
+  .btn-secondary {
+    background-color: #adb5bd;
+    color: #fff;
+  }
+
+  .btn-outline-dark {
+    border-color: #343a40;
+    color: #343a40;
+  }
+
+  .btn-outline-dark:hover {
+    background-color: #343a40;
+    color: #fff;
+  }
+
+  .btn-outline-success:hover {
+    background-color: #198754;
+    color: #fff;
+  }
+
+  .btn-outline-info {
+    border-color: #0dcaf0;
+    color: #0dcaf0;
+  }
+
+  .btn-outline-info:hover {
+    background-color: #0dcaf0;
+    color: #fff;
+  }
+
+  .btn-danger {
+    background-color: #dc3545;
+    border: none;
+  }
+
+  /* Divider Line */
+  hr.my-5 {
+    border-top: 2px dashed #dee2e6;
+  }
+
+  /* Danger Zone Styling */
+  #danger-zone {
+    border-left: 5px solid #dc3545;
+    padding-left: 12px;
+  }
+
+  /* Highlight Button Group */
+  .list-inline-item .btn {
+    margin-bottom: 0.5rem;
+    border-radius: 20px;
+  }
+
+  /* OTP Status */
+  #otp-status {
+    font-weight: 600;
+    margin-left: 8px;
+  }
+</style>
+
+<a href="{% url 'dashboard:'|add:user.user_type %}" class="back-button">
+  <i class="fas fa-arrow-left me-2"></i> Back
+</a>
+
+<div class="jump-section-wrapper">
+  <!-- <h5 class="w-100 text-center mb-3">🔽 Jump to Section</h5> -->
+  <a href="#account-settings" class="btn btn-outline-dark btn-sm">🛠 Account Settings</a>
+  <a href="#preferences" class="btn btn-outline-dark btn-sm">⚙️ Preferences</a>
+  <a href="#notifications" class="btn btn-outline-dark btn-sm">🔔 Notifications</a>
+  <a href="#danger-zone" class="btn btn-outline-danger btn-sm">🗑️ Danger Zone</a>
+  <a href="#career-preferences" class="btn btn-outline-success btn-sm">🎓 Career Preferences</a>
+</div>
+
+  
+<div class="container mt-4">
+    <h3 class="mb-4" id="account-settings">🔧 Account Settings</h3>
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="hidden" name="form_type" value="account_settings">
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" name="email" value="{{ user.email }}" required>
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label">Phone Number (Optional)</label>
+      <input type="text" class="form-control" id="phone" name="phone" value="{{ user.profile.phone }}">
+    </div>
+    <div class="mb-3">
+      <label for="photo" class="form-label">Profile Picture</label>
+      <input type="file" class="form-control" id="photo" name="profile_photo">
+    </div>
+    <div class="mb-3">
+      <label for="name" class="form-label">Full Name</label>
+      <input type="text" class="form-control" id="name" name="name" value="{{ user.get_full_name }}">
+    </div>
+    <button type="submit" class="btn btn-primary">Update Profile</button>
+  </form>
+
+  <hr class="my-5">
+
+  <h4 id="preferences">⚙️ Preferences</h4>
+  <form method="POST">
+    {% csrf_token %}
+    <input type="hidden" name="form_type" value="preferences">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="camera" name="camera_enabled" {% if user.camera_enabled %}checked{% endif %}>
+      <label class="form-check-label" for="camera">Enable Camera Monitoring</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="sound" name="sound_enabled" {% if user.sound_enabled %}checked{% endif %}>
+      <label class="form-check-label" for="sound">Enable Sound Notifications</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="tab_alert" name="tab_alert" {% if user.tab_alert %}checked{% endif %}>
+      <label class="form-check-label" for="tab_alert">Enable Tab Switch Alerts</label>
+    </div>
+    <button type="submit" class="btn btn-secondary mt-2">Save Preferences</button>
+  </form>
+
+  <hr class="my-5">
+
+  <h4 id="notifications">🔔 Notification Settings</h4>
+  <form method="POST">
+    {% csrf_token %}
+    <input type="hidden" name="form_type" value="notifications">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="email_notify" name="email_notify" {% if user.email_notify %}checked{% endif %}>
+      <label class="form-check-label" for="email_notify">Enable Email Notifications</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="push_notify" name="push_notify" {% if user.push_notify %}checked{% endif %}>
+      <label class="form-check-label" for="push_notify">Enable Browser Push Notifications</label>
+    </div>
+    <button type="submit" class="btn btn-secondary mt-2">Save Notification Settings</button>
+  </form>
+
+  <hr class="my-5">
+
+  <!-- <h4 id="data-control">🗃️ Data Control</h4>
+  <div class="mb-3">
+    <a href="{{ user.profile.resume.url }}" class="btn btn-outline-primary" download>📄 Download Resume</a>
+    <a href="{% url 'dashboard:history' %}" class="btn btn-outline-secondary">📊 View Test History</a>
+  </div> -->
+
+  <!-- <hr class="my-5"> -->
+
+  <h4 class="text-danger mt-5" id="danger-zone">🗑️ Danger Zone</h4>
+<p>This will permanently delete your account, test history, and resume.</p>
+
+<form method="POST" action="{% url 'users:delete_account' %}" id="deleteForm">
+  {% csrf_token %}
+  <div class="mb-3">
+    <label for="email" class="form-label">Confirm your email address</label>
+    <input type="email" class="form-control" id="email" name="email" required>
+  </div>
+  <div class="mb-3 d-flex gap-2">
+    <button type="button" class="btn btn-outline-info" onclick="sendOTP()">Send OTP to Email</button>
+    <span id="otp-status" class="text-success"></span>
+  </div>
+  <div class="mb-3">
+    <label for="otp" class="form-label">Enter OTP</label>
+    <input type="text" class="form-control" id="otp" name="otp" maxlength="6" required>
+  </div>
+  <button class="btn btn-danger" type="submit" onclick="return confirm('Are you absolutely sure? This cannot be undone.')">
+    Delete My Account
+  </button>
+</form>
+
+  <hr class="my-5">
+
+  <h4 id="career-preferences">🎓 Career Preferences (Optional)</h4>
+<form method="POST">
+  {% csrf_token %}
+  <input type="hidden" name="form_type" value="career">
+
+  <div class="mb-3">
+    <label for="job_interest" class="form-label">Interested Job Role</label>
+    <input type="text" class="form-control" id="job_interest" name="job_interest" 
+           value="{{ user.profile.job_interest }}" placeholder="e.g. Software Developer">
+  </div>
+
+  <div class="mb-3">
+    <label for="location" class="form-label">Preferred Location</label>
+    <input type="text" class="form-control" id="location" name="location" 
+           value="{{ user.profile.location }}" placeholder="e.g. Bengaluru">
+  </div>
+
+  <div class="mb-3">
+    <label for="salary_range" class="form-label">Expected Salary Range (optional)</label>
+    <input type="text" class="form-control" id="salary_range" name="salary_range" 
+           value="{{ user.profile.salary_range }}" placeholder="e.g. 5–7 LPA">
+  </div>
+
+  <button type="submit" class="btn btn-outline-success">Save Career Preferences</button>
+</form>
+
+</div>
+<script>
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== "") {
+            const cookies = document.cookie.split(';');
+            for (let cookie of cookies) {
+                cookie = cookie.trim();
+                if (cookie.startsWith(name + "=")) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    
+    function sendOTP() {
+        const csrftoken = getCookie('csrftoken');
+        const statusEl = document.getElementById("otp-status");
+        const button = document.querySelector("#deleteForm button[onclick='sendOTP()']");
+    
+        fetch("{% url 'users:send_delete_otp' %}", {
+            method: "POST",
+            headers: {
+                "X-CSRFToken": csrftoken,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({})
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.status) {
+                statusEl.innerText = "✅ OTP sent!";
+                alert("OTP sent to your registered email.");
+                startResendCountdown();
+            } else {
+                statusEl.innerText = "❌ " + (data.error || "Failed to send OTP");
+                button.disabled = false;
+            }
+        })
+        .catch(err => {
+            console.error("Error sending OTP:", err);
+            statusEl.innerText = "❌ Error sending OTP";
+        });
+    }
+    
+    function startResendCountdown() {
+        const button = document.querySelector("#deleteForm button[onclick='sendOTP()']");
+        let seconds = 60;
+        button.disabled = true;
+        button.innerText = `Resend in ${seconds}s`;
+    
+        const interval = setInterval(() => {
+            seconds--;
+            if (seconds > 0) {
+                button.innerText = `Resend in ${seconds}s`;
+            } else {
+                clearInterval(interval);
+                button.innerText = "Send OTP to Email";
+                button.disabled = false;
+            }
+        }, 1000);
+    }
+    </script>
+{% endblock %}
+
+    
+    

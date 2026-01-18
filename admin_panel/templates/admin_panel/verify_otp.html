@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verify OTP</title>
+    <link href="{% static 'admin_panel/css/login.css' %}" rel="stylesheet">
+</head>
+<body>
+  <div class="login-card animate-fade">
+    <h3>OTP Verification</h3>
+    <form method="POST">
+      {% csrf_token %}
+      <p>Enter the 4-digit OTP sent to <strong>{{ email }}</strong></p>
+      <input type="text" name="otp" maxlength="6" class="form-control mb-3" placeholder="Enter OTP" required>
+      <button type="submit" class="btn btn-light">Verify</button>
+    </form>
+    {% if messages %}
+      {% for msg in messages %}
+        <div class="alert alert-danger mt-2">{{ msg }}</div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</body>
+</html>

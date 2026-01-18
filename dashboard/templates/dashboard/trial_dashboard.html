@@ -1,0 +1,12 @@
+{% extends "dashboard/base_dashboard.html" %}
+{% block title %}Trial Dashboard{% endblock %}
+
+{% block page_content %}
+<h3>🎯 Trial User Dashboard</h3>
+<p>You have <strong>{{ request.user.attempts_left }}</strong> mock attempts remaining.</p>
+<ul>
+    <li>🚀 Try Aptitude</li>
+    <li>🔐 Limited Access to Technical</li>
+    <li>⚠ No Resume Upload or HR Round</li>
+</ul>
+{% endblock %}

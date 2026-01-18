@@ -1,0 +1,29 @@
+{% extends 'dashboard/base_dashboard.html' %}
+
+{% block page_title %}Student Dashboard{% endblock %}
+{% block breadcrumb %}Student{% endblock %}
+
+{% block page_content %}
+<h3 class="mb-4 fw-bold text-primary">👨‍🎓 Student Dashboard</h3>
+
+<div class="dashboard-button-grid">
+  <!-- <a href="{% url 'dashboard:upload_resume' %}" class="dashboard-btn">
+    📄 Upload Resume
+  </a> -->
+  <a href="{% url 'dashboard:aptitude' %}" class="dashboard-btn">
+    📝 Start Aptitude Test
+  </a>
+  <a href="{% url 'dashboard:technical' %}" class="dashboard-btn">
+    💻 Technical Round
+  </a>
+  <a href="{% url 'dashboard:gd' %}" class="dashboard-btn">
+    🗣️ Group Discussion
+  </a>
+  <a href="{% url 'dashboard:hr' %}" class="dashboard-btn">
+    👤 HR Round
+  </a>
+  <a href="{% url 'dashboard:history' %}" class="dashboard-btn">
+    📊 View Performance
+  </a>
+</div>
+{% endblock %}

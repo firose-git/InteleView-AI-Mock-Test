@@ -1,0 +1,12 @@
+{% extends 'dashboard/base_dashboard.html' %}
+{% block page_content %}
+<h3>📄 Upload Your Resume</h3>
+
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div>
+    <input type="file" name="resume" accept=".pdf,.doc,.docx" required>
+    <button type="submit">Upload</button>
+  </div>
+</form>
+{% endblock %}

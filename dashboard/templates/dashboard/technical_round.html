@@ -1,0 +1,9 @@
+{% extends 'dashboard/base_dashboard.html' %}
+{% block title %}Technical Round | InteleView AI{% endblock %}
+
+{% block page_content %}
+<h3>💻 Technical Round</h3>
+<p>Get coding challenges based on your experience level.</p>
+
+<a href="{% url 'technical:technical_ui' %}" class="btn btn-warning">Start Technical Round</a>
+{% endblock %}
