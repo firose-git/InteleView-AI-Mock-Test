@@ -5,7 +5,7 @@
 *For IT & Non-IT Students, Freshers, and Professionals*
 
 ![InteleView Banner](assets/landing1.png)
-![Logo](assets/Logo.png)
+[🔗 View Logo](assets/Logo.png)
 
 ---
 
